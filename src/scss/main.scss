@@ -1,0 +1,43 @@
+/*! main.scss | Bold | Css ninja 2021-2022 */
+
+/* ==========================================================================
+SCSS Imports
+========================================================================== */
+
+@import "abstracts/variables";
+@import "abstracts/brands";
+@import "abstracts/shadows";
+@import "abstracts/typography";
+
+@import "../sass/bulma";
+
+@import "utilities/utilities";
+
+@import "abstracts/animations";
+@import "abstracts/helpers";
+
+@import "components/pageloader";
+@import "components/loader";
+@import "components/placeload";
+@import "components/hamburger";
+@import "components/button";
+@import "components/dropdown";
+@import "components/modal";
+@import "components/card";
+@import "components/table";
+@import "components/tabs";
+@import "components/image";
+@import "components/video";
+@import "components/tag";
+@import "components/pricing";
+@import "components/map";
+@import "components/success";
+
+@import "forms/input";
+@import "forms/toggle";
+
+@import "layout/layout";
+@import "layout/navbar";
+@import "layout/responsive";
+
+@import "pages/landing";

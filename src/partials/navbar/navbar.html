@@ -1,0 +1,61 @@
+<div x-data="initNavbar()"  x-on:scroll.window="scroll()" x-init="initScrollAnchors()" class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation" :class="{
+        'is-scrolled': scrolled,
+        '': !scrolled,
+        'is-solid': mobileOpen,
+        '': !mobileOpen
+    }">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <img src="/img/logo/logo.svg" alt="">
+                <span class="logo-text">Houseo</span>
+            </a>
+
+            <div class="navbar-burger" @click="openMobileMenu()">
+                <span class="menu-toggle">
+                    <span class="icon-box-toggle" :class="{
+                            'active': mobileOpen,
+                            '': !mobileOpen
+                        }">
+                        <span class="rotate">
+                            <i class="icon-line-top"></i>
+                            <i class="icon-line-center"></i>
+                            <i class="icon-line-bottom"></i>
+                        </span>
+                    </span>
+                </span>
+            </div>
+        </div>
+
+        <div class="navbar-menu" :class="{
+                'is-active': mobileOpen,
+                '': !mobileOpen
+            }">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    House
+                </a>
+                <a class="navbar-item">
+                    Office
+                </a>
+                <a class="navbar-item">
+                    Store
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <a class="navbar-item">
+                    Help
+                </a>
+                <a class="navbar-item is-hidden-mobile">
+                    |
+                </a>
+                <div class="navbar-item">
+                    <a href="#quote-section" class="button is-primary raised scroll-link">
+                        Get a Quote
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

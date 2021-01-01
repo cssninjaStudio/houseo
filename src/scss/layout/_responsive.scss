@@ -1,0 +1,317 @@
+/* ==========================================================================
+Media Queries
+========================================================================== */
+
+/* ==========================================================================
+Tablet Landscape
+========================================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    //Hero cation
+    .hero-caption {
+        .title {
+            font-size: 2.2rem;
+        }
+    }
+
+    //Testimonials
+    .testimonial-cards {
+        .testimonial-card {
+            padding: 24px;
+
+            .customer {
+                img {
+                    height: 34px !important;
+                    width: 34px !important;
+                }
+
+                .meta {
+                    span {
+                        font-size: .8rem !important;
+                    }
+
+                    small {
+                        font-size: .75rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+Tablet Portrait
+========================================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    //Navbar
+    .navbar {
+        .navbar-brand {
+            height: 70px;
+
+            .navbar-burger {
+                min-width: 70px;
+                min-height: 70px;
+            }
+        }
+
+        .navbar-menu.is-active {
+            text-align: center;
+
+            .button {
+                width: 100%;
+                max-width: 480px;
+            }
+        }
+    }
+
+    //Hero
+    .hero-caption {
+        padding-top: 80px;
+
+        .column.is-4 {
+            max-width: 480px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        img {
+            max-width: 490px;
+            max-height: 490px;
+            margin: 0 auto;
+        }
+    }
+
+    //Boxes
+    .boxes-section {
+        .column {
+            &:first-child {
+                max-width: 480px;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            &:nth-child(2), &:nth-child(3) {
+                display: flex;
+            }
+        }
+
+        .box-wrap {
+            margin: 8px !important;
+            margin-top: 0 !important;
+            width: calc(50% - 16px) !important;
+
+            &.is-pulled, &.is-pushed {
+                margin: 8px !important;
+                margin-top: 0 !important;
+            }
+
+            .icon-box {
+                text-align: center;
+
+                img {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    //Side feature
+    .side-feature {
+        padding-bottom: 60px;
+
+        img {
+            display: block;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        h3, p {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            margin-bottom: 12px;
+        }
+    }
+
+    //Testimonials
+    .testimonial-cards {
+        .column {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .testimonial-card {
+            margin: 0 10px;
+            width: calc(50% - 20px);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    //Quote form
+    .form-section {
+        .card-form {
+            .inner-form {
+                .content-block {
+                    .services-types {
+                        .radio-box {
+                            .radio-box-inner {
+                                .meta {
+                                    h3 {
+                                        font-size: .75rem !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Footer
+    .footer {
+        .footer-text {
+            max-width: 480px;
+        }
+    }
+}
+
+/* ==========================================================================
+Mobile Only
+========================================================================== */
+
+@media (max-width: 767px) {
+    //Navbar
+    .navbar {
+        .navbar-brand {
+            height: 70px;
+
+            .navbar-burger {
+                min-width: 70px;
+                min-height: 70px;
+            }
+        }
+
+        .navbar-menu.is-active {
+            text-align: center;
+
+            .button {
+                width: 100%;
+            }
+        }
+    }
+
+    //Hero
+    .hero-caption {
+        text-align: center;
+
+        .title {
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+        }
+    }
+
+    .hero-foot {
+        ul {
+            //display: flex;
+            //flex-direction: column;
+
+            li img {
+                max-width: 90px !important;
+                margin: 0 10px !important;
+            }
+        }
+    }
+
+    //Icon boxes
+    .box-wrap {
+        &.is-pulled, &.is-pushed {
+            margin-bottom: 20px !important;
+            margin-top: 0 !important;
+        }
+    }
+
+    //Testimonials
+    .testimonial-cards {
+        .testimonial-card {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    //Quote form
+    .form-section {
+        .card-form {
+            padding: 30px;
+
+            .inner-form {
+                .back-block {
+                    top: -48px !important;
+                    left: 0;
+                    right: 0;
+                    background: $white;
+                    margin: 0 auto;
+                }
+
+                .content-block {
+                    .project-types, .budget-types {
+                        flex-direction: column;
+                        padding: 16px 0;
+
+                        .radio-box {
+                            width: calc(100% - 16px) !important;
+                        }
+                    }
+
+                    .services-types {
+                        flex-direction: column;
+                        padding: 16px 0;
+
+                        .radio-box {
+                            width: calc(100% - 16px) !important;
+                        }
+                    }
+
+                    .project-scope {
+                        .uploader-row {
+                            .uploaders {
+                                .uploader {
+                                    &:last-child {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .button-block {
+                    .button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    //Footer
+    .footer {
+        .copyright {
+            flex-direction: column;
+
+            .copyright-logo {
+                margin-bottom: 6px;
+            }
+        }
+    }
+}
