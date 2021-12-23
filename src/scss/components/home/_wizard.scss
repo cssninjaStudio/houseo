@@ -314,3 +314,82 @@ Wizard
     }
   }
 }
+
+@media (max-width: 767px) {
+  .form-section {
+    .card-form {
+      padding: 30px;
+
+      .inner-form {
+        .back-block {
+          top: -48px !important;
+          left: 0;
+          right: 0;
+          background: $white;
+          margin: 0 auto;
+        }
+
+        .content-block {
+          .project-types,
+          .budget-types {
+            flex-direction: column;
+            padding: 16px 0;
+
+            .radio-box {
+              width: calc(100% - 16px) !important;
+            }
+          }
+
+          .services-types {
+            flex-direction: column;
+            padding: 16px 0;
+
+            .radio-box {
+              width: calc(100% - 16px) !important;
+            }
+          }
+
+          .project-scope {
+            .uploader-row {
+              .uploaders {
+                .uploader {
+                  &:last-child {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .button-block {
+          .button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .form-section {
+    .card-form {
+      .inner-form {
+        .content-block {
+          .services-types {
+            .radio-box {
+              .radio-box-inner {
+                .meta {
+                  h3 {
+                    font-size: 0.75rem !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

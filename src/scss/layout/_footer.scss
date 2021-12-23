@@ -83,3 +83,11 @@ Footer
     }
   }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .footer {
+    .footer-text {
+      max-width: 480px;
+    }
+  }
+}

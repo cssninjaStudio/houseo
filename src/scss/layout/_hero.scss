@@ -26,3 +26,52 @@ Hero
     }
   }
 }
+
+@media (max-width: 767px) {
+  .hero-caption {
+    text-align: center;
+
+    .title {
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  }
+
+  .hero-foot {
+    ul {
+      li img {
+        max-width: 90px !important;
+        margin: 0 10px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero-caption {
+    padding-top: 80px;
+
+    .column.is-4 {
+      max-width: 480px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    img {
+      max-width: 490px;
+      max-height: 490px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .hero-caption {
+    .title {
+      font-size: 2.2rem;
+    }
+  }
+}

@@ -87,3 +87,66 @@ Navbar
     }
   }
 }
+
+@media (max-width: 767px) {
+  .navbar {
+    .navbar-brand {
+      height: 70px;
+
+      .navbar-burger {
+        min-width: 70px;
+        min-height: 70px;
+      }
+    }
+
+    .navbar-menu {
+      &.is-active {
+        text-align: center;
+        background: var(--navbar-bg-color);
+
+        .button {
+          width: 100%;
+        }
+      }
+    }
+
+    .navbar-item {
+      &.is-mobile-centered {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .navbar {
+    .navbar-brand {
+      height: 70px;
+
+      .navbar-burger {
+        min-width: 70px;
+        min-height: 70px;
+      }
+    }
+
+    .navbar-menu {
+      &.is-active {
+        text-align: center;
+        background: var(--navbar-bg-color);
+
+        .button {
+          width: 100%;
+          max-width: 480px;
+        }
+      }
+    }
+
+    .navbar-item {
+      &.is-mobile-centered {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
