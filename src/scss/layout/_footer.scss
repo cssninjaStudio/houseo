@@ -1,0 +1,93 @@
+/* ==========================================================================
+Footer
+========================================================================== */
+
+.footer {
+  padding: 6rem 1.5rem 2rem 1.5rem;
+  background: var(--footer-dark-bg-color);
+
+  .title {
+    margin-bottom: 1rem;
+  }
+
+  .footer-text {
+    color: var(--light-text);
+    font-family: var(--font);
+    font-size: 0.9rem;
+  }
+
+  .socials {
+    padding-top: 16px;
+
+    a {
+      margin: 0 10px;
+      font-size: 18px;
+      color: var(--medium-text);
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+
+  .footer-menu {
+    li {
+      padding-bottom: 8px;
+      font-family: var(--font);
+      font-size: 0.9rem;
+      color: var(--medium-text);
+
+      a {
+        color: var(--medium-text);
+        transition: color 0.3s;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4rem;
+
+    .copyright-logo {
+      min-width: 150px;
+    }
+
+    .copyright-text {
+      color: var(--light-text);
+      font-family: var(--font);
+      font-size: 0.9rem;
+
+      a {
+        color: var(--primary);
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    .copyright {
+      flex-direction: column;
+
+      .copyright-logo {
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .footer {
+    .footer-text {
+      max-width: 480px;
+    }
+  }
+}

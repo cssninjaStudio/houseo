@@ -1,31 +1,32 @@
 "use strict";
 
-import './store/store';
-import 'alpinejs';
-import { env } from './libs/utils/constants';
-import { initPageLoader } from './libs/components/pageloader';
-import { switchDemoImages, insertBgImages } from './libs/utils/utils';
-import { initNavbar } from './libs/components/navbar';
-import { initWizard } from './libs/components/wizard';
-const feather = require('feather-icons');
+//Alpine JS and plugins import
+import Alpine from "alpinejs"
+import intersect from "@alpinejs/intersect"
+import Fern from "@ryangjchandler/fern"
 
-window.initNavbar = initNavbar;
-window.initWizard = initWizard;
+window.Alpine = Alpine
+//Init intersect plugin
+Alpine.plugin(intersect)
+//Init Fern plugin
+Alpine.plugin(Fern)
+//Init Fern persisted store
+Alpine.persistedStore("app", {
+  isDark: false,
+});
+//Start Alpine JS
+Alpine.start()
 
-const showPageloader = initPageLoader();
+import { env } from "./libs/utils/constants";
+import { switchDemoImages, insertBgImages } from "./libs/utils/utils";
+import "./libs/components";
 
 document.onreadystatechange = function () {
-    if (document.readyState == 'complete') {
+  if (document.readyState == "complete") {
+    //Switch demo images
+    const changeImages = switchDemoImages(env);
 
-        //Switch demo images
-        const changeImages = switchDemoImages(env);
-
-        //Switch backgrounds
-        const changeBackgrounds = insertBgImages();
-
-        //Feather Icons
-        const featherIcons = feather.replace();
-        
-    }
-}
-
+    //Switch backgrounds
+    const changeBackgrounds = insertBgImages();
+  }
+};
