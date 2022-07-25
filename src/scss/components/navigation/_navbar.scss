@@ -4,17 +4,30 @@ Navbar
 
 .navbar {
   background: transparent;
+  border-bottom: 1px solid transparent;
   min-height: 70px;
   z-index: 40;
   transition: all 0.3s;
 
   &.is-mobile {
-    background: var(--navbar-bg-color);
-    border-bottom: 1px solid var(--navbar-border-color);
+    background: var(--wrap-bg-color);
+    border-bottom-color: var(--wrap-border-color);
+  }
+
+  &.is-solid {
+    background: var(--wrap-bg-color);
+    border-bottom-color: var(--wrap-border-color);
+
+    .navbar-item {
+      &.is-end-bordered {
+        border-color: var(--wrap-border-color);
+      }
+    }
   }
 
   &.is-scrolled {
-    background: var(--navbar-bg-color);
+    background: var(--wrap-bg-color);
+    border-bottom-color: var(--wrap-border-color);
     box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
 
     .navbar-brand {
@@ -22,6 +35,12 @@ Navbar
         span {
           color: var(--title-color) !important;
         }
+      }
+    }
+
+    .navbar-item {
+      &.is-end-bordered {
+        border-color: var(--wrap-border-color);
       }
     }
 
@@ -47,26 +66,45 @@ Navbar
 
   .navbar-brand {
     img {
-      height: 42px;
-      max-height: 42px;
+      height: 38px;
+      max-height: 38px;
       width: auto;
     }
 
     .logo-text {
-      margin-left: 16px;
-      font-family: var(--font);
-      font-size: 1.2rem;
+      margin-#{$start-direction}: 1rem;
+      font-family: var(--font-alt);
+      font-size: 1.5rem;
       color: var(--title-color);
-      font-weight: bold;
+      font-weight: 500;
     }
   }
 
   .navbar-item {
-    color: var(--light-text);
+    color: var(--medium-text);
     transition: all 0.3s;
+
+    .caret {
+      font-size: 1.1rem;
+      margin-#{$start-direction}: 0.15rem;
+      transition: transform 0.3s;
+    }
 
     &:hover {
       color: var(--title-color);
+
+      .caret {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.is-end-bordered {
+      border-#{$end-direction}: 1px solid transparent;
+      padding-#{$end-direction}: 1.5rem;
+
+      + .navbar-item {
+        padding-#{$start-direction}: 1.5rem;
+      }
     }
   }
 
@@ -74,8 +112,8 @@ Navbar
     .navbar-end {
       .navbar-item {
         .navbar-button {
-          height: 44px;
-          min-width: 130px;
+          height: 46px;
+          min-width: 120px;
           background: var(--primary);
           border: 1.2px solid var(--primary);
 
@@ -83,6 +121,74 @@ Navbar
             box-shadow: var(--primary-box-shadow);
           }
         }
+      }
+    }
+  }
+
+  .account-dropdown {
+    .dropdown-trigger {
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.25rem;
+        width: 2.25rem;
+        min-width: 2.25rem;
+        padding: 0;
+        background: none;
+        outline: none;
+        border: none;
+        cursor: pointer;
+
+        img {
+          height: 2.25rem;
+          min-height: 2.25rem;
+          width: 2.25rem;
+          min-width: 2.25rem;
+          border-radius: 50%;
+          pointer-events: none;
+        }
+      }
+    }
+
+    .dropdown-menu {
+      .dropdown-content {
+        border-radius: 0;
+      }
+    }
+
+    .menu-option {
+      display: flex;
+      align-items: center;
+      background: transparent;
+      border-radius: 0;
+      padding: 0.5rem;
+      cursor: pointer;
+
+      .iconify {
+        font-size: 1rem;
+        margin-#{$end-direction}: 0.75rem;
+        color: var(--light-text);
+      }
+
+      .meta {
+        line-height: 1.2;
+
+        h4 {
+          font-family: var(--font-alt);
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: var(--title-color);
+        }
+
+        p {
+          font-size: 0.8rem;
+          color: var(--light-text);
+        }
+      }
+
+      &:hover {
+        background: var(--wrap-muted-color);
       }
     }
   }
@@ -146,6 +252,18 @@ Navbar
       &.is-mobile-centered {
         display: flex;
         justify-content: center;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .navbar {
+    &:not(.is-scrolled):not(.is-solid):not(.is-mobile) {
+      .navbar-item {
+        &.is-split {
+          color: var(--white);
+        }
       }
     }
   }

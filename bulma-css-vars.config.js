@@ -2,7 +2,7 @@ const { hsl } = require('bulma-css-vars')
 
 const appColors = {
   white: '#fff',
-  primary: hsl(217, 100, 59), // '#2e7eff',
+  primary: hsl(239, 100, 59), // '#2e31ff',
   dark: hsl(226, 34, 24), // '#283252',
   link: hsl(229, 53, 53), // '#485fc7',
   info: hsl(200, 97, 45), // '#039be5',

@@ -45,7 +45,6 @@
   &.is-solid {
     line-height: 1;
     font-size: 0.9rem;
-    font-weight: 500;
 
     &.raised:hover,
     &.is-raised {
@@ -54,7 +53,7 @@
   }
 
   &:not(.is-rounded) {
-    border-radius: 0.75rem;
+    border-radius: 0.2rem;
   }
 
   &.is-primary {

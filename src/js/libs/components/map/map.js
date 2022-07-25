@@ -1,98 +1,67 @@
-export function initMapBox() {
+export function initSmallMap() {
+  const token =
+    "pk.eyJ1IjoiY3NzbmluamEiLCJhIjoiY2toZW1nYm0zMDAxODJycXFzZ3g4cnZ6diJ9.9ebfrGREuwkauRr_afDTgA";
+  const markerOptions = {
+    color: "red",
+  };
 
-    const token = 'pk.eyJ1IjoiY3NzbmluamEiLCJhIjoiY2toZW1nYm0zMDAxODJycXFzZ3g4cnZ6diJ9.9ebfrGREuwkauRr_afDTgA';
-    const markerOptions = {
-        color: 'red',
-    };
+  return {
+    initMap() {
+      mapboxgl.accessToken = token;
+      const longitude = parseFloat(
+        document.getElementById("small-map").getAttribute("data-long")
+      );
+      const latitude = parseFloat(
+        document.getElementById("small-map").getAttribute("data-lat")
+      );
+      const smallMap = new mapboxgl.Map({
+        container: "small-map",
+        style: this.$store.app.isDark === true
+          ? "mapbox://styles/mapbox/dark-v10"
+          : "mapbox://styles/mapbox/light-v10",
+        center: [longitude, latitude],
+        zoom: 12,
+      });
 
-    const map1 = document.getElementById('mapbox-1');
-    const map2 = document.getElementById('mapbox-2');
-    const map3 = document.getElementById('mapbox-3');
-    const map4 = document.getElementById('mapbox-4');
-    const map5 = document.getElementById('mapbox-5');
-    const map6 = document.getElementById('mapbox-6');
+      smallMap.addControl(new mapboxgl.NavigationControl());
 
-    if (typeof (map1) != 'undefined' && map1 != null) {
-        mapboxgl.accessToken = token;
-        const mapbox1 = new mapboxgl.Map({
-            container: 'mapbox-1',
-            style: 'mapbox://styles/mapbox/streets-v11',
-            center: [12.550343, 55.665957],
-            zoom: 8
-            });
+      const marker = new mapboxgl.Marker(markerOptions)
+        .setLngLat([longitude, latitude])
+        .addTo(smallMap);
+    },
+  };
+}
 
-        const marker1 = new mapboxgl.Marker(markerOptions)
-            .setLngLat([12.550343, 55.665957])
-            .addTo(mapbox1);
-    }
+export function initContactMap() {
+  const token =
+    "pk.eyJ1IjoiY3NzbmluamEiLCJhIjoiY2toZW1nYm0zMDAxODJycXFzZ3g4cnZ6diJ9.9ebfrGREuwkauRr_afDTgA";
+  const markerOptions = {
+    color: "red",
+  };
 
-    if (typeof (map2) != 'undefined' && map2 != null) {
-        mapboxgl.accessToken = token;
-        const mapbox2 = new mapboxgl.Map({
-            container: 'mapbox-2',
-            style: 'mapbox://styles/mapbox/streets-v11',
-            center: [12.550343, 55.665957],
-            zoom: 8
-            });
+  return {
+    initHeroMap() {
+      mapboxgl.accessToken = token;
+      const longitude = parseFloat(
+        document.getElementById("hero-map").getAttribute("data-long")
+      );
+      const latitude = parseFloat(
+        document.getElementById("hero-map").getAttribute("data-lat")
+      );
+      const mainMap = new mapboxgl.Map({
+        container: "hero-map",
+        style: this.$store.app.isDark === true
+          ? "mapbox://styles/mapbox/dark-v10"
+          : "mapbox://styles/mapbox/light-v10",
+        center: [longitude, latitude],
+        zoom: 12,
+      });
 
-        const marker2 = new mapboxgl.Marker(markerOptions)
-            .setLngLat([12.550343, 55.665957])
-            .addTo(mapbox2);
-    }
+      mainMap.addControl(new mapboxgl.NavigationControl());
 
-    if (typeof (map3) != 'undefined' && map3 != null) {
-        mapboxgl.accessToken = token;
-        const mapbox3 = new mapboxgl.Map({
-            container: 'mapbox-3',
-            style: 'mapbox://styles/mapbox/light-v10',
-            center: [12.550343, 55.665957],
-            zoom: 8
-            });
-
-        const marker3 = new mapboxgl.Marker(markerOptions)
-            .setLngLat([12.550343, 55.665957])
-            .addTo(mapbox3);
-    }
-
-    if (typeof (map4) != 'undefined' && map4 != null) {
-        mapboxgl.accessToken = token;
-        const mapbox4 = new mapboxgl.Map({
-            container: 'mapbox-4',
-            style: 'mapbox://styles/mapbox/light-v10',
-            center: [12.550343, 55.665957],
-            zoom: 8
-            });
-
-        const marker4 = new mapboxgl.Marker(markerOptions)
-            .setLngLat([12.550343, 55.665957])
-            .addTo(mapbox4);
-    }
-
-    if (typeof (map5) != 'undefined' && map5 != null) {
-        mapboxgl.accessToken = token;
-        const mapbox5 = new mapboxgl.Map({
-            container: 'mapbox-5',
-            style: 'mapbox://styles/mapbox/dark-v10',
-            center: [12.550343, 55.665957],
-            zoom: 8
-            });
-
-        const marker5 = new mapboxgl.Marker(markerOptions)
-            .setLngLat([12.550343, 55.665957])
-            .addTo(mapbox5);
-    }
-
-    if (typeof (map6) != 'undefined' && map6 != null) {
-        mapboxgl.accessToken = token;
-        const mapbox6 = new mapboxgl.Map({
-            container: 'mapbox-6',
-            style: 'mapbox://styles/mapbox/dark-v10',
-            center: [12.550343, 55.665957],
-            zoom: 8
-            });
-
-        const marker6 = new mapboxgl.Marker(markerOptions)
-            .setLngLat([12.550343, 55.665957])
-            .addTo(mapbox6);
-    }
+      const marker1 = new mapboxgl.Marker(markerOptions)
+        .setLngLat([longitude, latitude])
+        .addTo(mainMap);
+    },
+  };
 }

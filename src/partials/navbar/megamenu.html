@@ -1,0 +1,177 @@
+<div
+  class="megamenu"
+  x-bind:class="{
+    'is-active': megamenuOpened,
+    '': !megamenuOpened,
+  }"
+>
+  <!--Megamenu 1-->
+  <div x-show="openedMegamenu === 'megamenu-1'" class="megamenu-inner">
+    <button class="close-button" x-on:click="megamenuOpened = !megamenuOpened">
+      <i data-feather="arrow-left"></i>
+    </button>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-4">
+          <div class="megamenu-block">
+            <div class="media">
+              <div class="media-left text-primary">
+                <i class="iconify" data-icon="ph:buildings-duotone"></i>
+              </div>
+              <div class="media-content">
+                <h3 class="text-rainbow">Properties</h3>
+                <p>
+                  Houseo makes it easy to browse homes. When you’re ready, you
+                  can also connect with a local agent to explore financing
+                  solutions
+                </p>
+                <a href="/properties.html" class="arrow-link">
+                  <span>Explore all properties</span>
+                  <i class="iconify" data-icon="lucide:arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-2">
+          <div class="megamenu-block has-margin">
+            <h4 class="text-rainbow">Categories</h4>
+            <ul>
+              <li>
+                <a href="/properties.html" class="slide-link is-default">
+                  <span>Residences</span>
+                </a>
+              </li>
+              <li>
+                <a href="/properties.html" class="slide-link is-default">
+                  <span>Apartments</span>
+                </a>
+              </li>
+              <li>
+                <a href="/properties.html" class="slide-link is-default">
+                  <span>Houses</span>
+                </a>
+              </li>
+              <li>
+                <a href="/properties.html" class="slide-link is-default">
+                  <span>Mansions</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="megamenu-block">
+            <div class="showcase">
+              <a href="/property-details.html" class="showcase-item">
+                <img src="/img/photo/megamenu/1.jpg" alt="showcase photo" />
+                <div class="showcase-content">
+                  <div>
+                    <h5 class="title is-6 is-narrow">Barnaby Tower</h5>
+                    <p>Private residence</p>
+                  </div>
+                  <i class="iconify" data-icon="ph:house-duotone"></i>
+                </div>
+              </a>
+              <a href="/property-details.html" href="#" class="showcase-item">
+                <img src="/img/photo/megamenu/2.jpg" alt="showcase photo" />
+                <div class="showcase-content">
+                  <div>
+                    <h5 class="title is-6 is-narrow">High Hills</h5>
+                    <p>Private residence</p>
+                  </div>
+                  <i class="iconify" data-icon="ph:house-duotone"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Megamenu 2-->
+  <div x-show="openedMegamenu === 'megamenu-2'" class="megamenu-inner">
+    <button class="close-button" x-on:click="megamenuOpened = !megamenuOpened">
+      <i data-feather="arrow-left"></i>
+    </button>
+    <div class="container">
+      <div class="columns">
+        <div class="column is-4">
+          <div class="megamenu-block">
+            <div class="media">
+              <div class="media-left text-primary">
+                <i class="iconify" data-icon="ph:house-duotone"></i>
+              </div>
+              <div class="media-content">
+                <h3 class="text-rainbow">Rentals</h3>
+                <p>
+                  Houseo makes it easy to browse homes. When you’re ready, you
+                  can also connect with a local agent to explore financing
+                  solutions
+                </p>
+                <a href="/properties.html" class="arrow-link">
+                  <span>Explore all properties</span>
+                  <i class="iconify" data-icon="lucide:arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-2">
+          <div class="megamenu-block has-margin">
+            <h4 class="text-rainbow">Categories</h4>
+            <ul>
+              <li>
+                <a href="/properties.html" class="slide-link is-default">
+                  <span>Residences</span>
+                </a>
+              </li>
+              <li>
+                <a href="/properties.html" class="slide-link is-default">
+                  <span>Apartments</span>
+                </a>
+              </li>
+              <li>
+                <a href="/properties.html" class="slide-link is-default">
+                  <span>Houses</span>
+                </a>
+              </li>
+              <li>
+                <a href="/properties.html" class="slide-link is-default">
+                  <span>Mansions</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="megamenu-block">
+            <div class="showcase">
+              <a  href="/property-details.html" class="showcase-item">
+                <img src="/img/photo/megamenu/3.jpg" alt="showcase photo" />
+                <div class="showcase-content">
+                  <div>
+                    <h5 class="title is-6 is-narrow">Cozy beach house</h5>
+                    <p>Private house</p>
+                  </div>
+                  <i class="iconify" data-icon="ph:house-duotone"></i>
+                </div>
+              </a>
+              <a href="/property-details.html" class="showcase-item">
+                <img src="/img/photo/megamenu/4.jpg" alt="showcase photo" />
+                <div class="showcase-content">
+                  <div>
+                    <h5 class="title is-6 is-narrow">Stanislas Tower</h5>
+                    <p>Luxury apartments</p>
+                  </div>
+                  <i class="iconify" data-icon="ph:house-duotone"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

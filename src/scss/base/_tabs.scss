@@ -64,7 +64,7 @@
       .tabs {
         flex-grow: 2;
         min-width: 25%;
-        margin-right: 60px;
+        margin-#{$end-direction}: 60px;
 
         ul {
           display: block;
@@ -76,14 +76,14 @@
 
             &.is-active {
               a {
-                border-right-color: var(--primary);
+                border-#{$end-direction}-color: var(--primary);
               }
             }
 
             a {
               display: block;
               border-bottom-color: transparent !important;
-              border-right: 3px solid #dbdbdb;
+              border-#{$end-direction}: 3px solid #dbdbdb;
             }
           }
         }

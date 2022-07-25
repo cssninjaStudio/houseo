@@ -1,0 +1,1031 @@
+---
+layout: split
+title: Home
+---
+
+<div class="hero is-grey is-fullheight search-hero">
+  <div class="hero-cover columns is-gapless">
+    <div class="column">
+      <div class="cover-block"></div>
+    </div>
+    <div class="column">
+      <div class="cover-block" data-background="/img/photo/hero/3.jpg"></div>
+    </div>
+  </div>
+
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-8">
+          <div class="hero-caption">
+            <h1 class="title is-1 is-thin is-spaced">
+              Find the house of your dreams.
+            </h1>
+            <h2 class="subtitle is-5">
+              We help you find the perfect space that will make you and your
+              family happy.
+            </h2>
+          </div>
+          <div class="hero-search" x-data="{ activeTab: 'buy' }">
+            <div class="tabs is-boxed">
+              <ul>
+                <li :class="activeTab === 'buy' && 'is-active'">
+                  <a @click.prevent="activeTab = 'buy'">
+                    <span>Buy</span>
+                  </a>
+                </li>
+                <li :class="activeTab === 'rent' && 'is-active'">
+                  <a @click.prevent="activeTab = 'rent'">
+                    <span>Rent</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="search-bar">
+              <div class="search-bar-inner">
+                <div class="control has-icon">
+                  <div class="select">
+                    <select>
+                      <option>Property type</option>
+                      <option>Private residence</option>
+                      <option>Private house</option>
+                      <option>Apartment</option>
+                      <option>Mansion</option>
+                    </select>
+                    <div class="form-icon">
+                      <i class="iconify" data-icon="lucide:home"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="control has-icon">
+                  <input
+                    type="text"
+                    class="input"
+                    placeholder="Search by location"
+                  />
+                  <div class="form-icon">
+                    <i class="iconify" data-icon="lucide:search"></i>
+                  </div>
+                </div>
+                <div class="control">
+                  <button type="button" class="button is-primary raised">
+                    Search
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="search-bar-settings">
+              <label for="new-properties" class="f-switch is-primary">
+                <input id="new-properties" type="checkbox" />
+                <i></i>
+              </label>
+
+              <p>Only include new properties</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="icon-title">
+      <div class="outer-icon">
+        <div class="inner-icon">
+          <i class="iconify" data-icon="ph:house-duotone"></i>
+        </div>
+      </div>
+      <div class="title-content">
+        <h2 class="title is-4">Popular properties</h2>
+        <h4 class="subtitle">This is a nice subtitle and longet text</h4>
+      </div>
+
+      <a class="all-link">
+        <i class="iconify" data-icon="lucide:arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="property-cards">
+      <div class="columns is-multiline b-columns-half-tablet-p">
+        <!-- Property -->
+        <div class="column is-4">
+          <a href="#" class="property-card">
+            <img src="/img/photo/properties/1.jpg" alt="showcase photo" />
+            <div class="property-content">
+              <div class="property-info">
+                <h3 class="title is-5 is-narrow is-bold">$240,000 USD</h3>
+                <p>14, Greenwalk passage, San Diego</p>
+              </div>
+              <div class="property-details">
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bed-double"></i>
+                    <span>3</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bedrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bath"></i>
+                    <span>2</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bathrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:box-select"></i>
+                    <span>190m²</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Living Area</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Property -->
+        <div class="column is-4">
+          <a href="#" class="property-card">
+            <img src="/img/photo/properties/2.jpg" alt="showcase photo" />
+            <div class="property-content">
+              <div class="property-info">
+                <h3 class="title is-5 is-narrow is-bold">$135,000 USD</h3>
+                <p>27, San Sebastian Av, San Diego</p>
+              </div>
+              <div class="property-details">
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bed-double"></i>
+                    <span>2</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bedrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bath"></i>
+                    <span>1</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bathrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:box-select"></i>
+                    <span>125m²</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Living Area</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Property -->
+        <div class="column is-4">
+          <a href="#" class="property-card">
+            <img src="/img/photo/properties/3.jpg" alt="showcase photo" />
+            <div class="property-content">
+              <div class="property-info">
+                <h3 class="title is-5 is-narrow is-bold">$320,000 USD</h3>
+                <p>57, Parkway Plaza, Los Angeles</p>
+              </div>
+              <div class="property-details">
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bed-double"></i>
+                    <span>4</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bedrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bath"></i>
+                    <span>3</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bathrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:box-select"></i>
+                    <span>320m²</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Living Area</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <!-- Side feature -->
+    <div class="side-section">
+      <div class="columns is-vcentered">
+        <div class="column is-5 is-offset-1 max-w-tp-5 auto-tablet-p">
+          <span class="tag is-primary is-outlined mb-2">NEW OFFER</span>
+          <h3 class="title is-3 is-narrow is-thin">
+            Coco Beach® private lofts
+          </h3>
+          <p class="py-2 max-w-4 text-medium">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illud non
+            continuo, ut aeque incontentae. Duo Reges: constructio interrete. Si
+            qua in iis corrigere voluit.
+          </p>
+
+          <div class="property-details">
+            <div class="property-detail">
+              <div class="detail-head">
+                <i class="iconify" data-icon="lucide:bed-double"></i>
+                <span>2</span>
+              </div>
+              <div class="detail-content">
+                <p>Bedrooms</p>
+              </div>
+            </div>
+            <div class="property-detail">
+              <div class="detail-head">
+                <i class="iconify" data-icon="lucide:bath"></i>
+                <span>2</span>
+              </div>
+              <div class="detail-content">
+                <p>Bathrooms</p>
+              </div>
+            </div>
+            <div class="property-detail">
+              <div class="detail-head">
+                <i class="iconify" data-icon="lucide:box-select"></i>
+                <span>175m²</span>
+              </div>
+              <div class="detail-content">
+                <p>Living Area</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="arrow-link">
+            <span>See more details</span>
+            <i class="iconify" data-icon="lucide:arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="column is-6">
+          <div class="image-clip">
+            <img
+              class="clipped-image"
+              src="/img/photo/building-clip-2.png"
+              alt=""
+            />
+            <div class="image-clip-inner"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="section-title is-side">
+      <h2 class="title is-3 is-narrow is-thin">What we can do to help you</h2>
+    </div>
+
+    <div class="fade-icon-boxes">
+      <div class="columns is-multiline b-columns-half-tablet-p">
+        <!-- Icon box -->
+        <div class="column is-3">
+          <div class="fade-icon-box">
+            <span class="icon">
+              <i class="iconify" data-icon="ph:handshake-duotone"></i>
+            </span>
+            <h4 class="title is-5 is-leading">Selling</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Summum
+              ením bonum exposuit vacuitatem.
+            </p>
+
+            <a href="#" class="arrow-link">
+              <span>Learn More</span>
+              <i class="iconify" data-icon="lucide:arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Icon box -->
+        <div class="column is-3">
+          <div class="fade-icon-box">
+            <span class="icon">
+              <i class="iconify" data-icon="ph:house-line-duotone"></i>
+            </span>
+
+            <h4 class="title is-5 is-leading">Buying</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Summum
+              ením bonum exposuit vacuitatem.
+            </p>
+
+            <a href="#" class="arrow-link">
+              <span>Learn More</span>
+              <i class="iconify" data-icon="lucide:arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Icon box -->
+        <div class="column is-3">
+          <div class="fade-icon-box">
+            <span class="icon">
+              <i class="iconify" data-icon="ph:armchair-duotone"></i>
+            </span>
+
+            <h4 class="title is-5 is-leading">Valuation</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Summum
+              ením bonum exposuit vacuitatem.
+            </p>
+
+            <a href="#" class="arrow-link">
+              <span>Learn More</span>
+              <i class="iconify" data-icon="lucide:arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Icon box -->
+        <div class="column is-3">
+          <div class="fade-icon-box">
+            <span class="icon">
+              <i class="iconify" data-icon="ph:gear-six-duotone"></i>
+            </span>
+
+            <h4 class="title is-5 is-leading">Maintenance</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Summum
+              ením bonum exposuit vacuitatem.
+            </p>
+
+            <a href="#" class="arrow-link">
+              <span>Learn More</span>
+              <i class="iconify" data-icon="lucide:arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="icon-title">
+      <div class="outer-icon">
+        <div class="inner-icon">
+          <i class="iconify" data-icon="ph:house-duotone"></i>
+        </div>
+      </div>
+      <div class="title-content">
+        <h2 class="title is-4">Popular properties</h2>
+        <h4 class="subtitle">This is a nice subtitle and longet text</h4>
+      </div>
+
+      <a class="all-link">
+        <i class="iconify" data-icon="lucide:arrow-right"></i>
+      </a>
+    </div>
+
+    <div class="property-cards">
+      <div class="columns is-multiline b-columns-half-tablet-p">
+        <!-- Property -->
+        <div class="column is-4">
+          <a href="#" class="property-card">
+            <img src="/img/photo/properties/4.jpg" alt="showcase photo" />
+            <div class="property-content">
+              <div class="property-info">
+                <h3 class="title is-5 is-narrow is-bold">$95,000 USD</h3>
+                <p>Camino Madruga, San Diego</p>
+              </div>
+              <div class="property-details">
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bed-double"></i>
+                    <span>2</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bedrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bath"></i>
+                    <span>1</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bathrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:box-select"></i>
+                    <span>110m²</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Living Area</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Property -->
+        <div class="column is-4">
+          <a href="#" class="property-card">
+            <img src="/img/photo/properties/5.jpg" alt="showcase photo" />
+            <div class="property-content">
+              <div class="property-info">
+                <h3 class="title is-5 is-narrow is-bold">$275,000 USD</h3>
+                <p>59, San Marino Av, San Diego</p>
+              </div>
+              <div class="property-details">
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bed-double"></i>
+                    <span>4</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bedrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bath"></i>
+                    <span>3</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bathrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:box-select"></i>
+                    <span>290m²</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Living Area</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Property -->
+        <div class="column is-4">
+          <a href="#" class="property-card">
+            <img src="/img/photo/properties/6.jpg" alt="showcase photo" />
+            <div class="property-content">
+              <div class="property-info">
+                <h3 class="title is-5 is-narrow is-bold">$185,000 USD</h3>
+                <p>9, Santa Maria St, San Francisco</p>
+              </div>
+              <div class="property-details">
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bed-double"></i>
+                    <span>3</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bedrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bath"></i>
+                    <span>1</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bathrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:box-select"></i>
+                    <span>150m²</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Living Area</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Property -->
+        <div class="column is-4">
+          <a href="#" class="property-card">
+            <img src="/img/photo/properties/7.jpg" alt="showcase photo" />
+            <div class="property-content">
+              <div class="property-info">
+                <h3 class="title is-5 is-narrow is-bold">$290,000 USD</h3>
+                <p>48, Long Beach road, San Diego</p>
+              </div>
+              <div class="property-details">
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bed-double"></i>
+                    <span>5</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bedrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bath"></i>
+                    <span>3</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bathrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:box-select"></i>
+                    <span>350m²</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Living Area</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Property -->
+        <div class="column is-4">
+          <a href="#" class="property-card">
+            <img src="/img/photo/properties/8.jpg" alt="showcase photo" />
+            <div class="property-content">
+              <div class="property-info">
+                <h3 class="title is-5 is-narrow is-bold">$175,000 USD</h3>
+                <p>22, Milton Av, Los Angeles</p>
+              </div>
+              <div class="property-details">
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bed-double"></i>
+                    <span>2</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bedrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bath"></i>
+                    <span>2</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bathrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:box-select"></i>
+                    <span>130m²</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Living Area</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Property -->
+        <div class="column is-4">
+          <a href="#" class="property-card">
+            <img src="/img/photo/properties/9.jpg" alt="showcase photo" />
+            <div class="property-content">
+              <div class="property-info">
+                <h3 class="title is-5 is-narrow is-bold">$225,000 USD</h3>
+                <p>89, Michael Zhang Av, Los Angeles</p>
+              </div>
+              <div class="property-details">
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bed-double"></i>
+                    <span>4</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bedrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:bath"></i>
+                    <span>2</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Bathrooms</p>
+                  </div>
+                </div>
+                <div class="property-detail">
+                  <div class="detail-head">
+                    <i class="iconify" data-icon="lucide:box-select"></i>
+                    <span>225m²</span>
+                  </div>
+                  <div class="detail-content">
+                    <p>Living Area</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="section-title is-side b-centered-tablet-p">
+      <h2 class="title is-3 is-narrow is-thin">
+        Talented and experienced Agents
+      </h2>
+    </div>
+
+    <div class="side-video">
+      <div class="columns is-vcentered b-centered-tablet-p">
+        <div class="column is-6 is-relative is-centered-portrait">
+          <div class="video-player-container is-square reversed-play">
+            <video
+              id="hero-player"
+              class="video-player"
+              playsinline
+              controls
+              data-poster="/img/video/poster-square-2.jpg"
+            >
+              <source src="/img/video/hands.mp4" type="video/mp4" />
+              <source src="/img/video/hands.webm" type="video/webm" />
+            </video>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="columns is-multiline b-columns-half-tablet-p">
+            <div class="column is-6">
+              <div class="feature py-2 medium:py-4">
+                <i class="iconify" data-icon="ph:buildings-duotone"></i>
+                <h4 class="title is-6 is-narrow">Solid Expertise</h4>
+                <p class="max-w-2 text-medium">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  videbimus.
+                </p>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="feature py-2 medium:py-4">
+                <i class="iconify" data-icon="ph:medal-duotone"></i>
+                <h4 class="title is-6 is-narrow">Award Winning</h4>
+                <p class="max-w-2 text-medium">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  videbimus.
+                </p>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="feature py-2 medium:py-4">
+                <i class="iconify" data-icon="ph:sparkle-duotone"></i>
+                <h4 class="title is-6 is-narrow">Creativity</h4>
+                <p class="max-w-2 text-medium">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  videbimus.
+                </p>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="feature py-2 medium:py-4">
+                <i class="iconify" data-icon="ph:gear-six-duotone"></i>
+                <h4 class="title is-6 is-narrow">Technicity</h4>
+                <p class="max-w-2 text-medium">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  videbimus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <!-- Side feature -->
+    <div class="side-section">
+      <div class="columns is-vcentered b-centered-tablet-p">
+        <div class="column is-5 is-offset-1">
+          <h3 class="title is-3 is-narrow is-thin">
+            Highest ranking standards
+          </h3>
+          <p class="py-2 max-w-4 auto-tablet-p text-medium">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illud non
+            continuo, ut aeque incontentae. Duo Reges: constructio interrete. Si
+            qua in iis corrigere voluit, deteriora fecit. Sit enim idem caecus,
+            debilis.
+          </p>
+
+          <ul class="side-list">
+            <li>
+              <i class="iconify" data-icon="lucide:check"></i>
+              <span>AA+ construction standard</span>
+            </li>
+            <li>
+              <i class="iconify" data-icon="lucide:check"></i>
+              <span>All-Risk insurance</span>
+            </li>
+            <li>
+              <i class="iconify" data-icon="lucide:check"></i>
+              <span>Project live tracking</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="column is-6">
+          <div class="image-composition">
+            <img src="/img/photo/buildings/6.jpg" alt="" />
+            <div class="composition-box">
+              <div class="box-icon">
+                <i class="iconify" data-icon="ion:flash"></i>
+              </div>
+              <h4 class="title is-6 is-leading">AA+ Standard</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Side feature -->
+    <div class="side-section">
+      <div class="columns is-vcentered b-centered-tablet-p">
+        <div class="column is-6">
+          <div class="image-composition">
+            <img src="/img/photo/buildings/8.jpg" alt="" />
+            <div class="composition-testimonial">
+              <div class="text-content">
+                <i
+                  class="iconify"
+                  data-icon="fluent:star-emphasis-24-filled"
+                ></i>
+                <h4 class="title is-6 is-leading">Simply incredible</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div class="meta-content">
+                <img src="/img/avatars/5.jpg" alt="Author" />
+                <span>Chris Stappler &#8212; Barton Inc.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-5">
+          <h3 class="title is-3 is-narrow is-thin">A robust partnership</h3>
+          <p class="py-2 max-w-4 auto-tablet-p text-medium">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illud non
+            continuo, ut aeque incontentae. Duo Reges: constructio interrete. Si
+            qua in iis corrigere voluit, deteriora fecit. Sit enim idem caecus,
+            debilis.
+          </p>
+
+          <ul class="side-list">
+            <li>
+              <i class="iconify" data-icon="lucide:check"></i>
+              <span>Weekly status meetings</span>
+            </li>
+            <li>
+              <i class="iconify" data-icon="lucide:check"></i>
+              <span>Project monitoring</span>
+            </li>
+            <li>
+              <i class="iconify" data-icon="lucide:check"></i>
+              <span>Quarterly process audits</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="section-title is-side">
+      <h2 class="title is-3 is-narrow is-thin">What they say about us</h2>
+    </div>
+
+    <div class="testimonials">
+      <div
+        class="testimonial-cards has-background-image-contained"
+        data-background="/img/shapes/1.svg"
+      >
+        <div class="columns is-multiline">
+          <div class="column is-4 -mt-8">
+            <div class="testimonial-card">
+              <i class="iconify" data-icon="fa6-solid:quote-left"></i>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Confecta res esset. Aliter homines, aliter philosophos loqui
+                putas oportere? Mihi, inquam, qui te id ipsum rogavi? Frater et
+                T. Erat enim res aperta.
+              </p>
+              <div class="customer">
+                <img src="/img/avatars/1.jpg" alt="" />
+                <div class="meta">
+                  <span>Nicole James</span>
+                  <small>Los Angeles, CA</small>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <i class="iconify" data-icon="fa6-solid:quote-left"></i>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. At enim
+                hic etiam dolore. Quis negat.
+              </p>
+              <div class="customer">
+                <img src="/img/avatars/2.jpg" alt="" />
+                <div class="meta">
+                  <span>MarK Coleo</span>
+                  <small>San Francisco, CA</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="testimonial-card">
+              <i class="iconify" data-icon="fa6-solid:quote-left"></i>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+                negat? Atqui reperies, inquit, in hoc quidem pertinacem; Id
+                Sextilius factum negabat.
+              </p>
+              <div class="customer">
+                <img src="/img/avatars/3.jpg" alt="" />
+                <div class="meta">
+                  <span>Martha Stewart</span>
+                  <small>San Bernardo, CA</small>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <i class="iconify" data-icon="fa6-solid:quote-left"></i>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hanc
+                ergo intuens debet institutum illud quasi signum absolvere.
+                Satis est ad hoc responsum. Nos commodius agimus.
+              </p>
+              <div class="customer">
+                <img src="/img/avatars/4.jpg" alt="" />
+                <div class="meta">
+                  <span>Brian Welmingg</span>
+                  <small>Los Angeles, CA</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column is-4 mt-2">
+            <div class="testimonial-card">
+              <i class="iconify" data-icon="fa6-solid:quote-left"></i>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hanc
+                ergo intuens debet institutum illud quasi signum absolvere.
+                Satis est ad hoc responsum. Nos commodius agimus.
+              </p>
+              <div class="customer">
+                <img src="/img/avatars/5.jpg" alt="" />
+                <div class="meta">
+                  <span>Chris Stappler</span>
+                  <small>Barton Inc.</small>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <i class="iconify" data-icon="fa6-solid:quote-left"></i>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scisse
+                enim.
+              </p>
+              <div class="customer">
+                <img src="/img/avatars/6.jpg" alt="" />
+                <div class="meta">
+                  <span>Nicole James</span>
+                  <small>Los Angeles, CA</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="logo-grid">
+      <div class="logo-grid-inner">
+        <!-- Item -->
+        <div class="logo-grid-item">
+          <img src="/img/logos/gutwork.svg" alt="Customer logo" />
+        </div>
+        <!-- Item -->
+        <div class="logo-grid-item">
+          <img src="/img/logos/kromo.svg" alt="Customer logo" />
+        </div>
+        <!-- Item -->
+        <div class="logo-grid-item">
+          <img src="/img/logos/tribe.svg" alt="Customer logo" />
+        </div>
+        <!-- Item -->
+        <div class="logo-grid-item">
+          <img src="/img/logos/hewitt.svg" alt="Customer logo" />
+        </div>
+        <!-- Item -->
+        <div class="logo-grid-item">
+          <img src="/img/logos/proactive.svg" alt="Customer logo" />
+        </div>
+        <!-- Item -->
+        <div class="logo-grid-item">
+          <img src="/img/logos/vonmo.svg" alt="Customer logo" />
+        </div>
+        <!-- Item -->
+        <div class="logo-grid-item">
+          <img src="/img/logos/infinite.svg" alt="Customer logo" />
+        </div>
+        <!-- Item -->
+        <div class="logo-grid-item">
+          <img src="/img/logos/natchpay.svg" alt="Customer logo" />
+        </div>
+        <!-- Item -->
+        <div class="logo-grid-item">
+          <img src="/img/logos/asuna.svg" alt="Customer logo" />
+        </div>
+        <!-- Item -->
+        <div class="logo-grid-item">
+          <img src="/img/logos/bobcot.svg" alt="Customer logo" />
+        </div>
+        <!-- Item -->
+        <div class="logo-grid-item">
+          <img src="/img/logos/phasekit.svg" alt="Customer logo" />
+        </div>
+        <!-- Item -->
+        <div class="logo-grid-item">
+          <img src="/img/logos/grubspot.svg" alt="Customer logo" />
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-outer">
+      <div
+        class="cta-wrapper"
+        data-background="https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      >
+        <div class="cta-overlay"></div>
+        <div class="cta-content">
+          <h2 class="title is-3 is-thin is-inverted">
+            Engage with our company and invest in our projects
+          </h2>
+          <div class="buttons is-centered">
+            <button class="button is-solid">Invest Now</button>
+            <button class="button is-solid">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

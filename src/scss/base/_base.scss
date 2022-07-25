@@ -5,7 +5,7 @@
 body {
   background: var(--html-bg-color);
   transition: background-color 0.3s;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 code {
@@ -19,5 +19,13 @@ hr {
 
   &.is-inverted {
     background: var(--dark-bg-light-16);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    &:not(.has-sticky) {
+      overflow-x: hidden;
+    }
   }
 }

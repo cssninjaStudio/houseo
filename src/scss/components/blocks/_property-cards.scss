@@ -1,0 +1,61 @@
+.property-cards {
+  padding: 2rem 0;
+
+  .property-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg-color);
+    box-shadow: var(--light-box-shadow);
+    width: 100%;
+    z-index: 1;
+
+    .property-content {
+      border: 1px solid var(--card-border-color);
+      border-top: none;
+      padding: 1.25rem;
+
+      .property-info {
+        padding-bottom: 1.25rem;
+        margin-bottom: 1.25rem;
+        border-bottom: 1px solid var(--card-border-color);
+
+        p {
+          font-size: 0.95rem;
+          color: var(--light-text);
+        }
+      }
+
+      .property-details {
+        display: flex;
+
+        .property-detail {
+          flex: 1 1 0;
+
+          .detail-head {
+            display: flex;
+            align-items: center;
+            color: var(--title-color);
+
+            .iconify {
+              margin-#{$end-direction}: 0.5rem;
+            }
+
+            span {
+              font-size: 1.1rem;
+              font-family: var(--font);
+              font-weight: 700;
+            }
+          }
+
+          .detail-content {
+            p {
+              color: var(--light-text);
+              font-size: 0.85rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

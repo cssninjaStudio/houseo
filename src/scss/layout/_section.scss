@@ -5,8 +5,26 @@ Section
 .section {
   background: var(--section-bg-color);
 
+  .section-title {
+    &.is-side {
+      max-width: 940px;
+    }
+  }
+
   &.is-grey {
     background: var(--section-bg-color-grey);
   }
 }
 
+
+@media (max-width: 767px) {
+  .section {
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .section {
+    overflow: hidden;
+  }
+}

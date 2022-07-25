@@ -14,11 +14,11 @@
   --placeload-dark-nuance-from: rgb(255 255 255 / 15%);
   --placeload-dark-nuance-to: rgb(255 255 255 / 24%);
 
-  // primary HSL (#41b883) // hsl(217, 100%, 59%)
-  @include colorHsl("primary", 217, 100%, 59%);
+  // primary HSL (#2e31ff) // hsl(239, 100%, 59%)
+  @include colorHsl("primary", 239, 100%, 59%);
 
-  // secondary HSL (#00d1b2) // hsl(171, 100%, 41%)
-  @include colorHsl("secondary", 171, 100%, 41%);
+  // secondary HSL (#a424ff) // hsl(275, 100%, 57%)
+  @include colorHsl("secondary", 275, 100%, 57%);
 
   // accent HSL (#7F00FF) // hsl(270, 100%, 50%)
   @include colorHsl("accent", 270, 100%, 50%);

@@ -25,7 +25,7 @@
   &.has-icon {
     .form-icon {
       position: absolute;
-      left: 0;
+      #{$start-direction}: 0;
       top: 0;
       height: 40px;
       width: 40px;
@@ -53,15 +53,15 @@
       }
     }
 
-    .input {
-      padding-left: 40px;
+    .input, .select {
+      padding-#{$start-direction}: 40px;
 
       &.is-medium {
-        padding-left: 46px;
+        padding-#{$start-direction}: 46px;
       }
 
       &.is-large {
-        padding-left: 54px;
+        padding-#{$start-direction}: 54px;
       }
 
       &:focus {
@@ -77,7 +77,7 @@
 3. Input
 ========================================================================== */
 
-.input {
+.input, .select select {
   font-family: var(--font);
   transition: all 0.3s;
   box-shadow: none;
@@ -89,7 +89,7 @@
     border-color: var(--input-base-border-color-hover);
   }
 
-  &:focus {
+  &:focus, &:focus-within {
     box-shadow: var(--light-box-shadow);
     border-color: var(--input-base-border-color-hover);
 

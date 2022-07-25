@@ -3,6 +3,8 @@ export function initNavbar() {
     scrolled: false,
     height: 60,
     mobileOpen: false,
+    megamenuOpened: false,
+    openedMegamenu: "megamenu-1",
     scroll() {
       let scrollValue = window.scrollY;
       if (scrollValue >= this.height) {

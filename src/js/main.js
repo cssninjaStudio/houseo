@@ -1,24 +1,28 @@
 "use strict";
 
 //Alpine JS and plugins import
-import Alpine from "alpinejs"
-import intersect from "@alpinejs/intersect"
-import Fern from "@ryangjchandler/fern"
+import Alpine from "alpinejs";
+import intersect from "@alpinejs/intersect";
+import Fern from "@ryangjchandler/fern";
 
-window.Alpine = Alpine
+window.Alpine = Alpine;
 //Init intersect plugin
-Alpine.plugin(intersect)
+Alpine.plugin(intersect);
 //Init Fern plugin
-Alpine.plugin(Fern)
+Alpine.plugin(Fern);
 //Init Fern persisted store
 Alpine.persistedStore("app", {
   isDark: false,
+  isLoggedIn: false,
 });
 //Start Alpine JS
-Alpine.start()
+Alpine.start();
 
 import { env } from "./libs/utils/constants";
+import { initVideoPlayers } from "./libs/components/player/player";
 import { switchDemoImages, insertBgImages } from "./libs/utils/utils";
+import { initLazyLoading } from "./libs/utils/lazyload";
+import "./libs/demo";
 import "./libs/components";
 
 document.onreadystatechange = function () {
@@ -28,5 +32,17 @@ document.onreadystatechange = function () {
 
     //Switch backgrounds
     const changeBackgrounds = insertBgImages();
+
+    //Lazy Loading
+    const lazy = initLazyLoading();
+
+    //Video Players
+    const players = initVideoPlayers(env);
+
+    //Image zoom
+    const zoom = document.querySelector("[data-zoom]");
+    if (typeof (zoom) != 'undefined' && zoom != null) {
+      mediumZoom("[data-zoom]");
+    }
   }
 };

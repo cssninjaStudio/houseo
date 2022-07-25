@@ -27,6 +27,61 @@ var {
   }
 }
 
+.slide-link {
+  position: relative;
+  font-size: .95rem;
+  font-family: var(--font);
+  color: var(--primary);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.15rem;
+    #{$start-direction}: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width .3s;
+  }
+
+  &:hover {
+    color: var(--primary);
+    
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &.is-default:not(:hover) {
+    color: var(--light-text);
+  }
+}
+
+.arrow-link {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-family: var(--font);
+  color: var(--primary);
+  transition: opacity 0.3s;
+
+  &:hover {
+    color: var(--primary);
+    opacity: 0.8;
+
+    svg {
+      transform: translateX(0.25rem);
+    }
+  }
+
+  svg, i {
+    margin-#{$start-direction}: 0.25rem;
+    height: 18px;
+    width: 18px;
+    transition: transform 0.3s;
+  }
+}
+
 .title {
   font-family: var(--font-alt);
   color: var(--title-color);
@@ -49,6 +104,10 @@ var {
 
   &.is-thin {
     font-weight: 300;
+  }
+
+  &.is-normal {
+    font-weight: 400;
   }
 
   &.is-heavy {
@@ -111,7 +170,7 @@ var {
 .separator {
   width: 1px;
   height: 26px;
-  border-right: 1px solid var(--border);
+  border-#{$end-direction}: 1px solid var(--border);
 }
 
 /* ==========================================================================
@@ -212,4 +271,12 @@ var {
 
 .rem-150 {
   font-size: 1.5rem !important;
+}
+
+.rem-175 {
+  font-size: 1.75rem !important;
+}
+
+.rem-200 {
+  font-size: 2rem !important;
 }

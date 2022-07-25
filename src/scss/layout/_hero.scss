@@ -3,6 +3,8 @@ Hero
 ========================================================================== */
 
 .hero {
+  position: relative;
+
   .hero-foot {
     ul li {
       img {
@@ -12,6 +14,10 @@ Hero
         margin: 0 20px;
       }
     }
+  }
+
+  &.is-grey {
+    background: var(--hero-grey-bg-color);
   }
 }
 
@@ -38,6 +44,10 @@ Hero
     .subtitle {
       font-size: 1.2rem;
     }
+
+    .buttons {
+      justify-content: center;
+    }
   }
 
   .hero-foot {
@@ -53,17 +63,18 @@ Hero
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .hero-caption {
     padding-top: 80px;
-
-    .column.is-4 {
-      max-width: 480px;
-      margin: 0 auto;
-      text-align: center;
-    }
+    text-align: center;
+    max-width: 440px;
+    margin: 0 auto;
 
     img {
       max-width: 490px;
       max-height: 490px;
       margin: 0 auto;
+    }
+
+    .buttons {
+      justify-content: center;
     }
   }
 }

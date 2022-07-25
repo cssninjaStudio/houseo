@@ -1,353 +1,632 @@
 ---
-layout: default
-title: Home
+layout: minimal
+title: Houseo
 ---
 
-<div class="hero is-fullheight is-default is-bold">
-  <div class="hero-body">
-    <div class="container">
-      <div class="columns is-vcentered hero-caption">
-        <div class="column is-4 is-offset-1">
-          <h1 class="title is-2 is-bold">
-            We are Professionals of Interior Design
-          </h1>
-          <h2 class="subtitle is-5">
-            We help our customers redesigning life and work spaces.
-          </h2>
-          <p>
-            <a
-              href="#start-section"
-              class="button is-primary is-long-2 raised scroll-link"
-              >Learn more</a
+<!--Wrapper-->
+<div class="cssninja-product">
+  <!--Navigation-->
+  <div
+    class="cssninja-nav"
+    x-data="initNavbar()"
+    x-init="initScrollAnchors()"
+    x-on:scroll.window="scroll()"
+    :class="{
+    'is-scrolled': scrolled,
+    '': !scrolled,
+    'is-solid': mobileOpen,
+    '': !mobileOpen
+}"
+  >
+    <div class="cssninja-nav-inner">
+      <div class="left">
+        <a class="navbar-brand" href="/">
+          <span class="logo">
+            <img src="/img/logo/logo.svg" alt="" />
+            <span class="logo-text">Houseo</span>
+          </span>
+          <span class="version">v3.0</span>
+        </a>
+        <div class="nav-burger" @click="openMobileMenu()">
+          <div class="menu-toggle">
+            <div
+              class="icon-box-toggle is-navbar"
+              :class="{
+                  'active': mobileOpen,
+                  '': !mobileOpen
+              }"
             >
-            <a
-              href="#quote-section"
-              class="button is-solid is-long-2 scroll-link"
-              >Get a quote</a
-            >
-          </p>
-        </div>
-        <div class="column is-6 is-offset-1">
-          <figure class="image is-4by3">
-            <img
-              class="light-image-block"
-              src="/img/illustrations/hero.svg"
-              alt=""
-            />
-            <img
-              class="dark-image-block"
-              src="/img/illustrations/hero-dark.svg"
-              alt=""
-            />
-          </figure>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="hero-foot">
-    <div class="container">
-      <div class="tabs is-centered">
-        <ul>
-          <li><img src="/img/logos/gutwork.svg" alt="" /></li>
-          <li><img src="/img/logos/kromo.svg" alt="" /></li>
-          <li><img src="/img/logos/tribe.svg" alt="" /></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="start-section" class="section is-medium">
-  <div class="container">
-    <div id="start-section" class="columns is-vcentered boxes-section">
-      <div class="column is-4">
-        <h3 class="title is-4 is-bold">
-          Interior Design Made Simple For Everyone
-        </h3>
-        <p class="paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prioris
-          generis est docilitas, memoria; Cur haec eadem Democritus? Memini
-          vero, inquam; Duo Reges: constructio interrete.
-        </p>
-      </div>
-      <div class="column is-4">
-        <div class="box-wrap is-box-reveal is-pulled">
-          <div class="icon-box">
-            <img class="light-image-block" src="/img/icons/f1.svg" alt="" />
-            <img class="dark-image-block" src="/img/icons/f1-dark.svg" alt="" />
-            <h4 class="box-title">Furniture Design</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prioris
-              generis est docilitas, memoria; Cur haec eadem Democritus? Memini
-              vero, inquam.
-            </p>
-          </div>
-        </div>
-        <div class="box-wrap is-box-reveal">
-          <div class="icon-box">
-            <img class="light-image-block" src="/img/icons/f2.svg" alt="" />
-            <img class="dark-image-block" src="/img/icons/f2-dark.svg" alt="" />
-            <h4 class="box-title">Windows & Light</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prioris
-              generis est docilitas, memoria; Cur haec eadem Democritus? Memini
-              vero, inquam.
-            </p>
+              <div class="rotate">
+                <i class="icon-line-top"></i>
+                <i class="icon-line-center"></i>
+                <i class="icon-line-bottom"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="column is-4">
-        <div class="box-wrap is-box-reveal is-pushed">
-          <div class="icon-box">
-            <img class="light-image-block" src="/img/icons/f3.svg" alt="" />
-            <img class="dark-image-block" src="/img/icons/f3-dark.svg" alt="" />
-            <h4 class="box-title">Bathroom Design</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prioris
-              generis est docilitas, memoria; Cur haec eadem Democritus? Memini
-              vero, inquam.
-            </p>
-          </div>
-        </div>
-        <div class="box-wrap is-box-reveal">
-          <div class="icon-box">
-            <img class="light-image-block" src="/img/icons/f4.svg" alt="" />
-            <img class="dark-image-block" src="/img/icons/f4-dark.svg" alt="" />
-            <h4 class="box-title">Kitchen Design</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prioris
-              generis est docilitas, memoria; Cur haec eadem Democritus? Memini
-              vero, inquam.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-vcentered side-feature">
-      <div class="column is-5 is-offset-1">
-        <img
-          class="light-image-block"
-          src="/img/illustrations/feature-1.svg"
-          alt=""
-        />
-        <img
-          class="dark-image-block"
-          src="/img/illustrations/feature-1-dark.svg"
-          alt=""
-        />
-      </div>
-      <div class="column is-4">
-        <h3 class="title is-4 is-bold is-title-reveal">
-          Our quote app helps you defining your project
-        </h3>
-        <p class="paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prioris
-          generis est docilitas, memoria; Cur haec eadem Democritus? Memini
-          vero, inquam; Duo Reges: constructio interrete.
-        </p>
-      </div>
-    </div>
-
-    <div class="columns is-vcentered side-feature">
-      <div class="column is-5 is-hidden-desktop is-hidden-tablet">
-        <img
-          class="light-image-block"
-          src="/img/illustrations/feature-2.svg"
-          alt=""
-        />
-        <img
-          class="dark-image-block"
-          src="/img/illustrations/feature-2-dark.svg"
-          alt=""
-        />
-      </div>
-      <div class="column is-4 is-offset-2">
-        <h3 class="title is-4 is-bold is-title-reveal">
-          Our quote app helps you defining your project
-        </h3>
-        <p class="paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prioris
-          generis est docilitas, memoria; Cur haec eadem Democritus? Memini
-          vero, inquam; Duo Reges: constructio interrete.
-        </p>
-      </div>
-      <div class="column is-5 is-hidden-mobile">
-        <img
-          class="light-image-block"
-          src="/img/illustrations/feature-2.svg"
-          alt=""
-        />
-        <img
-          class="dark-image-block"
-          src="/img/illustrations/feature-2-dark.svg"
-          alt=""
-        />
-      </div>
-    </div>
-
-    <div class="columns is-vcentered side-feature">
-      <div class="column is-5 is-offset-1">
-        <img
-          class="light-image-block"
-          src="/img/illustrations/feature-3.svg"
-          alt=""
-        />
-        <img
-          class="dark-image-block"
-          src="/img/illustrations/feature-3-dark.svg"
-          alt=""
-        />
-      </div>
-      <div class="column is-4">
-        <h3 class="title is-4 is-bold is-title-reveal">
-          Our quote app helps you defining your project
-        </h3>
-        <p class="paragraph">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prioris
-          generis est docilitas, memoria; Cur haec eadem Democritus? Memini
-          vero, inquam; Duo Reges: constructio interrete.
-        </p>
-      </div>
-    </div>
-
-    <div class="testimonials">
-      <div class="title-wrap has-text-centered">
-        <h2 class="title is-3 is-bold">What they say about us</h2>
-        <h3 class="subtitle is-5">
-          Yeah, we know... That's a bunch of happy people
-        </h3>
-      </div>
-
       <div
-        class="testimonial-cards has-background-image-contained"
-        data-background="/img/shapes/1.svg"
+        class="right"
+        :class="{
+            'is-active': mobileOpen,
+            '': !mobileOpen
+        }"
       >
-        <div class="columns is-multiline">
-          <div class="column is-3">
-            <div class="testimonial-card">
-              <i class="fa fa-quote-left"></i>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Confecta res esset. Aliter homines, aliter philosophos loqui
-                putas oportere? Mihi, inquam, qui te id ipsum rogavi? Frater et
-                T. Erat enim res aperta.
-              </p>
-              <div class="customer">
-                <img src="/img/avatars/1.jpg" alt="" />
-                <div class="meta">
-                  <span>Nicole James</span>
-                  <small>Los Angeles, CA</small>
+        <a href="https://cssninja.io/product/houseo" class="nav-link"
+          >Product</a
+        >
+        <a href="#template-demos" class="nav-link scroll-link">Demos</a>
+        <a href="https://docs.cssninja.io/gulp-alpine/" class="nav-link"
+          >Documentation</a
+        >
+        <label class="theme-toggle">
+          <input
+            type="checkbox"
+            x-on:change="toggleTheme()"
+            :checked="$store.app.isDark"
+          />
+          <span class="theme-toggle-inner">
+            <i class="sun-icon iconify" data-icon="feather:sun"></i>
+            <i class="moon-icon iconify" data-icon="feather:moon"></i>
+          </span>
+        </label>
+        <a
+          href="https://support.cssninja.io"
+          class="button is-solid is-long-2 raised"
+          >Get Support</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <!--Hero-->
+  <div class="cssninja-hero">
+    <img
+      class="plant-pattern"
+      src="/img/demo/plant-pattern.svg"
+      alt="pattern"
+    />
+    <div class="container">
+      <div class="cssninja-hero-inner">
+        <div class="hero-caption mx-auto max-w-6">
+          <h1 class="title is-1 is-bold is-narrow">Houseo.</h1>
+          <p class="product-stacks">Bulma + Alpine JS Help Real Estate UI Kit</p>
+          <h3 class="subtitle is-5">
+            Houseo is a well designed Real Estate UI kit template that will help
+            you jumpstart your development project seamlessly.
+          </h3>
+          <div class="buttons is-centered">
+            <a
+              href="https://cssninja.io/product/houseo"
+              class="button is-primary raised scroll-link"
+              >Buy Now</a
+            >
+            <a href="#get-started" class="button is-solid scroll-link"
+              >Discover</a
+            >
+          </div>
+          <div class="product-stack product-stack-1">
+            <img src="/img/stacks/html5-light.svg" alt="stack" />
+          </div>
+          <div class="product-stack product-stack-2">
+            <img src="/img/stacks/alpinejs-light.svg" alt="stack" />
+          </div>
+          <div class="product-stack product-stack-3">
+            <img src="/img/stacks/sass-light.svg" alt="stack" />
+          </div>
+          <div class="product-stack product-stack-4">
+            <img src="/img/stacks/gulp.svg" alt="stack" />
+          </div>
+          <div class="product-stack product-stack-5">
+            <img src="/img/stacks/bulma-light.svg" alt="stack" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <img
+      class="template-mockup light-image-block"
+      src="/img/demo/houseo-mockup.png"
+      alt="Houseo header image"
+    />
+    <img
+      class="template-mockup dark-image-block"
+      src="/img/demo/houseo-mockup-dark.png"
+      alt="Houseo header image"
+    />
+    <img class="plant-pot" src="/img/demo/plant-pot.svg" alt="Plant" />
+  </div>
+
+  <div class="section is-overflown">
+    <div class="container">
+      <div class="cssninja-template">
+        <div class="columns">
+          <div class="column is-8">
+            <!--Template info-->
+            <div class="template-info">
+              <!--Section-->
+              <div id="get-started" class="template-info-section">
+                <!--Section title-->
+                <div class="max-w-4 mb-5">
+                  <h2 class="title is-3 is-bold is-leading">Built with</h2>
+                  <p class="paragraph">
+                    Although it is an HTML template, Houseo relies on powerful
+                    stacks like Alpine JS v3.x and Bulma as a CSS framework,
+                    making you able to build beautiful apps.
+                  </p>
+                </div>
+
+                <!--Stacks-->
+                <div class="template-stacks">
+                  <div
+                    class="columns is-multiline b-columns-half-mobile b-flex-tablet-p"
+                  >
+                    <!--Stack-->
+                    <div class="column is-3">
+                      <div class="template-stack-card">
+                        <i
+                          class="iconify smaller"
+                          data-icon="logos:alpinejs-icon"
+                        ></i>
+                        <h3 class="title is-6 is-narrow">Alpine JS</h3>
+                        <p class="paragraph rem-85">Version 3.x</p>
+                      </div>
+                    </div>
+                    <!--Stack-->
+                    <div class="column is-3">
+                      <div class="template-stack-card">
+                        <i class="iconify" data-icon="logos:bulma"></i>
+                        <h3 class="title is-6 is-narrow">Bulma</h3>
+                        <p class="paragraph rem-85">Version 9.x</p>
+                      </div>
+                    </div>
+                    <!--Stack-->
+                    <div class="column is-3">
+                      <div class="template-stack-card">
+                        <i class="iconify" data-icon="logos:sass"></i>
+                        <h3 class="title is-6 is-narrow">Sass</h3>
+                        <p class="paragraph rem-85">Dart Sass</p>
+                      </div>
+                    </div>
+                    <!--Stack-->
+                    <div class="column is-3">
+                      <div class="template-stack-card">
+                        <i class="iconify" data-icon="logos:gulp"></i>
+                        <h3 class="title is-6 is-narrow">Gulp</h3>
+                        <p class="paragraph rem-85">Version 4.x</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="testimonial-card">
-              <i class="fa fa-quote-left"></i>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. At enim
-                hic etiam dolore. Quis negat.
-              </p>
-              <div class="customer">
-                <img src="/img/avatars/2.jpg" alt="" />
-                <div class="meta">
-                  <span>MarK Coleo</span>
-                  <small>San Francisco, CA</small>
+
+              <!--Section-->
+              <div class="template-info-section">
+                <!--Section title-->
+                <div class="max-w-4 mb-5">
+                  <h2 class="title is-3 is-bold is-leading">Features</h2>
+                  <p class="paragraph">
+                    Houseo ships with a lot of features to make your developer
+                    and customer experiences as nice as possible, without the
+                    hassle and unecessary effort.
+                  </p>
+                </div>
+
+                <!--Features-->
+                <div class="template-features">
+                  <div class="columns is-multiline b-columns-third-tablet-p">
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i
+                          class="iconify"
+                          data-icon="ph:circles-three-duotone"
+                        ></i>
+                        <h3 class="title is-6 is-leading">Modern UI</h3>
+                        <p class="paragraph rem-90">
+                          A clean, well designed and well integrated UI for your
+                          app.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i
+                          class="iconify"
+                          data-icon="ph:terminal-window-duotone"
+                        ></i>
+                        <h3 class="title is-6 is-leading">Clean code</h3>
+                        <p class="paragraph rem-90">
+                          A clean code structure is there to help you with your
+                          workflow.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i
+                          class="iconify"
+                          data-icon="ph:moon-stars-duotone"
+                        ></i>
+                        <h3 class="title is-6 is-leading">Native dark mode</h3>
+                        <p class="paragraph rem-90">
+                          Houseo uses native CSS variables and makes theming
+                          super easy.
+                        </p>
+                      </div>
+                    </div>
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i
+                          class="iconify"
+                          data-icon="ph:globe-hemisphere-west-duotone"
+                        ></i>
+                        <h3 class="title is-6 is-leading">RTL support</h3>
+                        <p class="paragraph rem-90">
+                          Houseo supports RTL based layouts, just switch the
+                          stylesheet.
+                        </p>
+                      </div>
+                    </div>
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i
+                          class="iconify"
+                          data-icon="ph:github-logo-duotone"
+                        ></i>
+                        <h3 class="title is-6 is-leading">GitHub access</h3>
+                        <p class="paragraph rem-90">
+                          We grant you access to the private GitHub repo for
+                          live updates.
+                        </p>
+                      </div>
+                    </div>
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i
+                          class="iconify"
+                          data-icon="ph:clock-clockwise-duotone"
+                        ></i>
+                        <h3 class="title is-6 is-leading">Lifetime updates</h3>
+                        <p class="paragraph rem-90">
+                          You're entitled to receive lifetime updates for this
+                          product.
+                        </p>
+                      </div>
+                    </div>
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i class="iconify" data-icon="ph:books-duotone"></i>
+                        <h3 class="title is-6 is-leading">Documentation</h3>
+                        <p class="paragraph rem-90">
+                          An extensive documentation helps you setting up
+                          everything.
+                        </p>
+                      </div>
+                    </div>
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i class="iconify" data-icon="ph:parachute-duotone"></i>
+                        <h3 class="title is-6 is-leading">Support</h3>
+                        <p class="paragraph rem-90">
+                          A dedicated customer support portal to post your
+                          requests.
+                        </p>
+                      </div>
+                    </div>
+                    <!--Feature-->
+                    <div class="column is-4">
+                      <div class="template-feature">
+                        <i
+                          class="iconify"
+                          data-icon="ph:figma-logo-duotone"
+                        ></i>
+                        <h3 class="title is-6 is-leading">Design files</h3>
+                        <p class="paragraph rem-90">
+                          A free and minimal XD/Figma UI kit to help with your
+                          mockups.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--Section-->
+              <div class="template-info-section">
+                <!--Section title-->
+                <div class="max-w-4 mb-5">
+                  <h2 class="title is-3 is-bold is-leading">Demo Pages</h2>
+                  <p class="paragraph">
+                    Houseo ships with more than 13 superb demo pages to help
+                    you get started as fast as possible, and build an
+                    outstanding and memorable project.
+                  </p>
+                </div>
+
+                <!--Template demos-->
+                <div
+                  id="template-demos"
+                  class="template-demos"
+                  x-data="initRenderDemos()"
+                >
+                  <div class="columns is-multiline b-columns-third-tablet-p">
+                    <template x-for="screenshot in screenshots">
+                      <div class="column is-6 has-text-centered">
+                        <figure class="demo-wrapper">
+                          <template x-if="screenshot.new">
+                            <span class="new-tag">New</span>
+                          </template>
+
+                          <div class="image-wrapper">
+                            <img
+                              class="light-image-block"
+                              x-bind:data-src="screenshot.screenshotLight"
+                              alt="screenshot light image"
+                              data-lazy-load
+                            />
+                            <img
+                              class="dark-image-block"
+                              x-bind:data-src="screenshot.screenshotDark"
+                              alt="screenshot dark image"
+                              data-lazy-load
+                            />
+                          </div>
+
+                          <div class="circle-overlay is-landing"></div>
+                          <div class="demo-info has-text-centered">
+                            <div class="wrapper">
+                              <div
+                                class="demo-title"
+                                x-text="screenshot.name"
+                              ></div>
+                              <div class="demo-link">
+                                <a
+                                  class="is-dm"
+                                  x-bind:href="screenshot.link"
+                                  target="_blank"
+                                  >Go to demo
+                                  <i
+                                    class="iconify"
+                                    data-icon="ph:arrow-right-bold"
+                                  ></i
+                                ></a>
+                              </div>
+                            </div>
+                          </div>
+                        </figure>
+                      </div>
+                    </template>
+                  </div>
+                </div>
+              </div>
+
+              <!--Section-->
+              <div class="template-info-section">
+                <!--Section title-->
+                <div class="max-w-4 mb-5">
+                  <h2 class="title is-3 is-bold is-leading">FAQs</h2>
+                  <p class="paragraph">
+                    You probably already have a lot of questions. You can open a
+                    support ticket, or read some answers to the most common
+                    questions asked by our customers.
+                  </p>
+                </div>
+
+                <!--Template FAQ-->
+                <div class="template-faq">
+                  <div class="columns">
+                    <div class="column">
+                      <div
+                        class="accordion"
+                        x-data="initFaqAccordion()"
+                        x-init="setup()"
+                      >
+                        <div class="accordion-item">
+                          <button id="accordion-button-1" aria-expanded="false">
+                            <span class="accordion-title"
+                              >What is the difference between regular and
+                              extended?</span
+                            ><span class="icon" aria-hidden="true"></span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              The main difference between our licenses is the
+                              number of projects that you can build with our
+                              templates. If you're building a single project,
+                              the <a>regular license</a> is for you. However, if
+                              you are a professional developer or even an
+                              agency, you should consider purchasing an
+                              <a>extended license</a>, which will let you build
+                              up to 10 projects with the same license, saving up
+                              more than 30% on your purchase.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button id="accordion-button-2" aria-expanded="false">
+                            <span class="accordion-title"
+                              >What about licensing and SaaS projects?</span
+                            ><span class="icon" aria-hidden="true"></span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Unlike other platforms, it doesn't matter to us if
+                              your customers will need to pay to get access to
+                              your product. The price remains the same, whatever
+                              the type of project that you are building.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button id="accordion-button-3" aria-expanded="false">
+                            <span class="accordion-title"
+                              >What about theme customization?</span
+                            ><span class="icon" aria-hidden="true"></span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Theme customization is not part of our regular
+                              services and therefore not included in a product
+                              purchase. If you need customization services, feel
+                              free to reach us and make sure to send us your
+                              requirements so we can issue a quote for you or
+                              your company.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button id="accordion-button-4" aria-expanded="false">
+                            <span class="accordion-title"
+                              >What about the support scope?</span
+                            ><span class="icon" aria-hidden="true"></span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              Our <a>support policy</a> is very clear. We only
+                              support what is directly related to the template
+                              UI. Anything else remains optional. We do not
+                              support 3rd party plugins as well though we can
+                              provide some guidance on how to use them best, but
+                              not on how to implement them or fix your own
+                              implementation.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <button id="accordion-button-5" aria-expanded="false">
+                            <span class="accordion-title"
+                              >Can I be refunded if I need to?</span
+                            ><span class="icon" aria-hidden="true"></span>
+                          </button>
+                          <div class="accordion-content">
+                            <p>
+                              If the product doesn't suit your needs you can
+                              always ask us to get a refund under 14 days after
+                              product purchase. After, that delay you won't be
+                              eligible for a refund anymore. Refund requests
+                              must be motivated and have a valid and reasonnable
+                              reason to be approved. For more details, please
+                              take a look at our <a>refund policy</a>.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="column is-3">
-            <div class="testimonial-card">
-              <i class="fa fa-quote-left"></i>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-                negat? Atqui reperies, inquit, in hoc quidem pertinacem; Id
-                Sextilius factum negabat.
-              </p>
-              <div class="customer">
-                <img src="/img/avatars/3.jpg" alt="" />
-                <div class="meta">
-                  <span>Martha Stewart</span>
-                  <small>San Bernardo, CA</small>
+          <div class="column is-4">
+            <div x-data="initPurchaseCard()" class="purchase-card">
+              <div class="purchase-card-tabs">
+                <div class="inner-tabs">
+                  <a
+                    data-tab="regular"
+                    @click.prevent="toggleTabs($event)"
+                    :class="{
+                      'is-active': activeTab === 'regular'
+                    }"
+                    >Regular</a
+                  >
+                  <a
+                    data-tab="premium"
+                    @click.prevent="toggleTabs($event)"
+                    :class="{
+                      'is-active': activeTab === 'premium'
+                    }"
+                    >Premium</a
+                  >
+                  <a
+                    data-tab="extended"
+                    @click.prevent="toggleTabs($event)"
+                    :class="{
+                      'is-active': activeTab === 'extended'
+                    }"
+                    >Extended</a
+                  >
+                  <span class="naver"></span>
                 </div>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <i class="fa fa-quote-left"></i>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hanc
-                ergo intuens debet institutum illud quasi signum absolvere.
-                Satis est ad hoc responsum. Nos commodius agimus.
-              </p>
-              <div class="customer">
-                <img src="/img/avatars/4.jpg" alt="" />
-                <div class="meta">
-                  <span>Brian Welmingg</span>
-                  <small>Los Angeles, CA</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3">
-            <div class="testimonial-card">
-              <i class="fa fa-quote-left"></i>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hanc
-                ergo intuens debet institutum illud quasi signum absolvere.
-                Satis est ad hoc responsum. Nos commodius agimus.
-              </p>
-              <div class="customer">
-                <img src="/img/avatars/5.jpg" alt="" />
-                <div class="meta">
-                  <span>Alex Wrangler</span>
-                  <small>Irvine, CA</small>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <i class="fa fa-quote-left"></i>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scisse
-                enim.
-              </p>
-              <div class="customer">
-                <img src="/img/avatars/6.jpg" alt="" />
-                <div class="meta">
-                  <span>Nicole James</span>
-                  <small>Los Angeles, CA</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="column is-3">
-            <div class="testimonial-card">
-              <i class="fa fa-quote-left"></i>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scisse
-                enim te quis coarguere possit? Itaque ab his ordiamur. Vide,
-                quantum..
-              </p>
-              <div class="customer">
-                <img src="/img/avatars/7.jpg" alt="" />
-                <div class="meta">
-                  <span>Nina Lopez</span>
-                  <small>San Francisco, CA</small>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <i class="fa fa-quote-left"></i>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hanc
-                ergo intuens debet institutum illud quasi signum absolvere.
-                Satis est ad hoc responsum. Nos commodius agimus.
-              </p>
-              <div class="customer">
-                <img src="/img/avatars/8.jpg" alt="" />
-                <div class="meta">
-                  <span>Hunter Smith</span>
-                  <small>San Jose, CA</small>
+
+                <div class="inner-tabs-content">
+                  <div class="inner-content">
+                    <!--Regular price-->
+                    <div x-show="activeTab === 'regular'" class="price-block">
+                      <h3 class="price-value">$49</h3>
+                      <div class="price-meta">
+                        <h4>Regular license</h4>
+                        <p class="paragraph rem-85">
+                          Build a single project for you or one of your
+                          customers.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!--Premium price-->
+                    <div x-show="activeTab === 'premium'" class="price-block">
+                      <h3 class="price-value">$69</h3>
+                      <div class="price-meta">
+                        <h4>Premium license</h4>
+                        <p class="paragraph rem-85">
+                          Same as regular with private Github access.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!--Extended price-->
+                    <div x-show="activeTab === 'extended'" class="price-block">
+                      <h3 class="price-value">$349</h3>
+                      <div class="price-meta">
+                        <h4>Extended license</h4>
+                        <p class="paragraph rem-85">
+                          Build up to 10 projects for you or your customers.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!--Benefits-->
+                    <div class="benefits">
+                      <ul>
+                        <li x-show="activeTab !== 'extended'">
+                          <span>Up to 1 customer project</span>
+                        </li>
+                        <li x-show="activeTab === 'extended'">
+                          <span>Up to 10 customer projects</span>
+                        </li>
+                        <li
+                          :class="{
+                            'text-linethrough is-disabled': activeTab === 'regular'
+                          }"
+                        >
+                          <span>Access to private repo</span>
+                        </li>
+                        <li>
+                          <span>Lifetime updates</span>
+                        </li>
+                        <li>
+                          <span>Support answers under 48h</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <!--Action-->
+                    <div class="purchase-action">
+                      <a
+                        href="https://cssninja.io/product/houseo"
+                        class="button is-primary is-fullwidth raised"
+                        >Purchase Now</a
+                      >
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -356,751 +635,84 @@ title: Home
       </div>
     </div>
   </div>
-</div>
 
-<div id="quote-section" class="section is-grey form-section">
-  <div class="container">
-    <div class="form-title pt-5">
-      <h2 class="title is-4 is-bold is-title-reveal">Ask For A Quote</h2>
-    </div>
-    <div x-data="initWizard()" class="card-form">
-      <div class="form-content has-text-centered">
-        <div
-          id="form-section-0"
-          class="inner-form"
-          :class="{
-                        'is-active': activeWizardStep === 'wizard-step-0'
-                    }"
-        >
-          <div class="title-block">
-            <h3 class="title is-6">Let's get you a personalized quote</h3>
-            <h4>Follow the instructions to enter the info we need</h4>
-          </div>
-          <div class="image-block">
-            <img src="/img/illustrations/quote-1.svg" alt="" />
-          </div>
-          <div class="button-block">
-            <button
-              @click="browseWizard($event)"
-              class="button is-primary raised wizard-button"
-              data-step="wizard-step-1"
-            >
-              Start
-            </button>
-          </div>
-        </div>
-
-        <div
-          id="form-section-1"
-          class="inner-form"
-          :class="{
-                        'is-active': activeWizardStep === 'wizard-step-1'
-                    }"
-        >
-          <div class="title-block">
-            <h3 class="title is-6">1. What's the project type?</h3>
-            <h4>Please select a project type to proceed</h4>
-          </div>
-          <div class="content-block">
-            <div class="project-types">
-              <div class="radio-box">
-                <input
-                  x-on:change="selectProjectType()"
-                  type="radio"
-                  name="project_type"
-                />
-                <div class="radio-box-inner">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f1.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f1-dark.svg"
-                    alt=""
-                  />
-                  <h3>House project</h3>
-                  <p>I want my house to be reworked</p>
-                </div>
-              </div>
-              <div class="radio-box">
-                <input
-                  x-on:change="selectProjectType()"
-                  type="radio"
-                  name="project_type"
-                />
-                <div class="radio-box-inner">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f5.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f5-dark.svg"
-                    alt=""
-                  />
-                  <h3>Office project</h3>
-                  <p>I want my office to be reworked</p>
-                </div>
-              </div>
-              <div class="radio-box">
-                <input
-                  x-on:change="selectProjectType()"
-                  type="radio"
-                  name="project_type"
-                />
-                <div class="radio-box-inner">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f6.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f6-dark.svg"
-                    alt=""
-                  />
-                  <h3>Store project</h3>
-                  <p>I want my store to be reworked</p>
-                </div>
+  <div class="section template-cta">
+    <div class="container">
+      <div class="inner">
+        <div class="columns is-vcentered">
+          <div class="column is-5">
+            <div class="cta-caption mx-auto max-w-6">
+              <h1 class="title is-2 is-bold">Ready to dive in?</h1>
+              <h3 class="subtitle is-5">
+                Forget about the hassle, about spaghetti sauce template code and
+                start working with a clean and professional UI template.
+              </h3>
+              <div class="buttons -mt-2">
+                <a
+                  href="https://cssninja.io/product/houseo"
+                  class="button is-primary raised"
+                  >Buy Now</a
+                >
+                <a
+                  href="https://docs.cssninja.io/gulp-alpine/"
+                  class="button is-solid"
+                  >Read Docs</a
+                >
               </div>
             </div>
           </div>
-          <div class="button-block">
-            <button
-              @click="browseWizard($event)"
-              class="button is-primary raised wizard-button"
-              data-step="wizard-step-2"
-              :class="{
-                            'is-disabled': projectTypeSelected === false,
-                            '': projectTypeSelected === true
-                        }"
-            >
-              Next
-            </button>
-          </div>
-        </div>
-
-        <div
-          id="form-section-2"
-          class="inner-form"
-          :class="{
-                        'is-active': activeWizardStep === 'wizard-step-2'
-                    }"
-        >
-          <div
-            @click="browseBackWizard($event)"
-            class="back-block"
-            data-step="wizard-step-1"
-          >
-            <i class="iconify" data-icon="feather:arrow-left"></i>
-          </div>
-          <div class="title-block">
-            <h3 class="title is-6">2. What do you need?</h3>
-            <h4>Please select some services you need</h4>
-          </div>
-          <div class="content-block">
-            <div class="services-types">
-              <div class="radio-box">
-                <input x-on:change="selectServices()" type="checkbox" />
-                <div class="radio-box-inner is-flex">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f1.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f1-dark.svg"
-                    alt=""
-                  />
-                  <div class="meta">
-                    <h3>Furniture design</h3>
-                    <span>Handcrafted</span>
-                  </div>
-                </div>
-              </div>
-              <div class="radio-box">
-                <input x-on:change="selectServices()" type="checkbox" />
-                <div class="radio-box-inner">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f7.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f7-dark.svg"
-                    alt=""
-                  />
-                  <div class="meta">
-                    <h3>Decoration</h3>
-                    <span>Homemade</span>
-                  </div>
-                </div>
-              </div>
-              <div class="radio-box">
-                <input x-on:change="selectServices()" type="checkbox" />
-                <div class="radio-box-inner">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f8.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f8-dark.svg"
-                    alt=""
-                  />
-                  <div class="meta">
-                    <h3>Light Works</h3>
-                    <span>Illuminated</span>
-                  </div>
-                </div>
-              </div>
-              <div class="radio-box">
-                <input x-on:change="selectServices()" type="checkbox" />
-                <div class="radio-box-inner">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f9.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f9-dark.svg"
-                    alt=""
-                  />
-                  <div class="meta">
-                    <h3>Custom Windows</h3>
-                    <span>Carbon fiber</span>
-                  </div>
-                </div>
-              </div>
-              <div class="radio-box">
-                <input x-on:change="selectServices()" type="checkbox" />
-                <div class="radio-box-inner">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f10.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f10-dark.svg"
-                    alt=""
-                  />
-                  <div class="meta">
-                    <h3>Custom Seats</h3>
-                    <span>Alpaga</span>
-                  </div>
-                </div>
-              </div>
-              <div class="radio-box">
-                <input x-on:change="selectServices()" type="checkbox" />
-                <div class="radio-box-inner">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f11.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f11-dark.svg"
-                    alt=""
-                  />
-                  <div class="meta">
-                    <h3>Tables</h3>
-                    <span>Fine woods</span>
-                  </div>
-                </div>
-              </div>
-              <div class="radio-box">
-                <input x-on:change="selectServices()" type="checkbox" />
-                <div class="radio-box-inner">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f12.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f12-dark.svg"
-                    alt=""
-                  />
-                  <div class="meta">
-                    <h3>Closets & Shelves</h3>
-                    <span>Fine Woods</span>
-                  </div>
-                </div>
-              </div>
-              <div class="radio-box">
-                <input x-on:change="selectServices()" type="checkbox" />
-                <div class="radio-box-inner">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f13.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f13-dark.svg"
-                    alt=""
-                  />
-                  <div class="meta">
-                    <h3>Sound Design</h3>
-                    <span>Hi Fi & Stereo</span>
-                  </div>
-                </div>
-              </div>
-              <div class="radio-box">
-                <input x-on:change="selectServices()" type="checkbox" />
-                <div class="radio-box-inner">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f14.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f14-dark.svg"
-                    alt=""
-                  />
-                  <div class="meta">
-                    <h3>Kitchen Design</h3>
-                    <span>Fully chromed</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="button-block">
-            <button
-              @click="browseWizard($event)"
-              class="button is-primary raised wizard-button"
-              data-step="wizard-step-3"
-              :class="{
-                    'is-disabled': servicesSelected === false,
-                    '': servicesSelected === true
-                }"
-            >
-              Next
-            </button>
-          </div>
-        </div>
-
-        <div
-          id="form-section-3"
-          class="inner-form"
-          :class="{
-                        'is-active': activeWizardStep === 'wizard-step-3'
-                    }"
-        >
-          <div
-            @click="browseBackWizard($event)"
-            class="back-block"
-            data-step="wizard-step-2"
-          >
-            <i class="iconify" data-icon="feather:arrow-left"></i>
-          </div>
-          <div class="title-block">
-            <h3 class="title is-6">3. What's your budget?</h3>
-            <h4>Please select a budget range</h4>
-          </div>
-          <div class="content-block">
-            <div class="budget-types">
-              <div class="radio-box">
-                <input
-                  x-on:change="selectBudget()"
-                  type="radio"
-                  name="budget_type"
-                />
-                <div class="radio-box-inner">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f15.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f15-dark.svg"
-                    alt=""
-                  />
-                  <h3>$0 - $10K</h3>
-                  <p>A small but nice budget</p>
-                </div>
-              </div>
-              <div class="radio-box">
-                <input
-                  x-on:change="selectBudget()"
-                  type="radio"
-                  name="budget_type"
-                />
-                <div class="radio-box-inner">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f16.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f16-dark.svg"
-                    alt=""
-                  />
-                  <h3>$11K - $35K</h3>
-                  <p>A considerable budget</p>
-                </div>
-              </div>
-              <div class="radio-box">
-                <input
-                  x-on:change="selectBudget()"
-                  type="radio"
-                  name="budget_type"
-                />
-                <div class="radio-box-inner">
-                  <div class="selection-dot gelatine">
-                    <i class="iconify" data-icon="feather:check"></i>
-                  </div>
-                  <img
-                    class="light-image-block"
-                    src="/img/icons/f17.svg"
-                    alt=""
-                  />
-                  <img
-                    class="dark-image-block"
-                    src="/img/icons/f17-dark.svg"
-                    alt=""
-                  />
-                  <h3>$36K +</h3>
-                  <p>Wohoo! You rock!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="button-block">
-            <button
-              @click="browseWizard($event)"
-              class="button is-primary raised wizard-button"
-              data-step="wizard-step-4"
-              :class="{
-                            'is-disabled': budgetSelected === false,
-                            '': budgetSelected === true
-                        }"
-            >
-              Next
-            </button>
-          </div>
-        </div>
-
-        <div
-          id="form-section-4"
-          class="inner-form"
-          :class="{
-                        'is-active': activeWizardStep === 'wizard-step-4'
-                    }"
-        >
-          <div
-            @click="browseBackWizard($event)"
-            class="back-block"
-            data-step="wizard-step-3"
-          >
-            <i class="iconify" data-icon="feather:arrow-left"></i>
-          </div>
-          <div class="title-block">
-            <h3 class="title is-6">4. What's your scope?</h3>
-            <h4>Tell us more about your project</h4>
-          </div>
-          <div class="content-block">
-            <div class="project-scope">
-              <div class="field">
-                <div class="control">
-                  <textarea
-                    class="textarea"
-                    placeholder="Describe your project..."
-                  ></textarea>
-                </div>
-                <small>Minimum 5 words</small>
-              </div>
-
-              <div class="uploader-row">
-                <div class="uploaders">
-                  <div class="uploader">
-                    <input id="uploader-1" type="file" />
-                    <label for="uploader-1" class="uploader-controls">
-                      <i class="iconify" data-icon="feather:plus"></i>
-                    </label>
-                  </div>
-                  <div class="uploader">
-                    <input id="uploader-2" type="file" />
-                    <label for="uploader-2" class="uploader-controls">
-                      <i class="iconify" data-icon="feather:plus"></i>
-                    </label>
-                  </div>
-                  <div class="uploader">
-                    <input id="uploader-3" type="file" />
-                    <label for="uploader-3" class="uploader-controls">
-                      <i class="iconify" data-icon="feather:plus"></i>
-                    </label>
-                  </div>
-                  <div class="uploader">
-                    <input id="uploader-4" type="file" />
-                    <label for="uploader-4" class="uploader-controls">
-                      <i class="iconify" data-icon="feather:plus"></i>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="button-block">
-            <button
-              @click="browseWizard($event)"
-              class="button is-primary raised wizard-button"
-              data-step="wizard-step-5"
-            >
-              Next
-            </button>
-          </div>
-        </div>
-
-        <div
-          id="form-section-5"
-          class="inner-form"
-          :class="{
-                        'is-active': activeWizardStep === 'wizard-step-5'
-                    }"
-        >
-          <div
-            @click="browseBackWizard($event)"
-            class="back-block"
-            data-step="wizard-step-4"
-          >
-            <i class="iconify" data-icon="feather:arrow-left"></i>
-          </div>
-          <div class="title-block">
-            <h3 class="title is-6">5. Personal Info</h3>
-            <h4>Let us know your contact details</h4>
-          </div>
-          <div class="content-block">
-            <div class="contact-details">
-              <div class="field">
-                <div class="control has-icon">
-                  <input type="text" class="input" placeholder="Full Name *" />
-                  <div class="form-icon">
-                    <i class="iconify" data-icon="feather:user"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="field">
-                <div class="control has-icon">
-                  <input type="text" class="input" placeholder="Email *" />
-                  <div class="form-icon">
-                    <i class="iconify" data-icon="feather:mail"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="field">
-                <div class="control has-icon">
-                  <input
-                    type="text"
-                    class="input"
-                    placeholder="Phone Number *"
-                  />
-                  <div class="form-icon">
-                    <i class="iconify" data-icon="feather:phone"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="button-block">
-            <button
-              @click="browseWizard($event)"
-              class="button is-primary raised wizard-button"
-              data-step="wizard-step-6"
-            >
-              Finish
-            </button>
-          </div>
-        </div>
-
-        <div
-          id="form-section-6"
-          class="inner-form"
-          :class="{
-                        'is-active': activeWizardStep === 'wizard-step-6'
-                    }"
-        >
-          <div class="title-block">
-            <h3 class="title is-6">Congratz! We're done!</h3>
-            <h4>You just finished entering all the info we need</h4>
-          </div>
-          <div class="content-block">
-            <svg
-              class="SuccessAnimation is-primary animated"
-              xmlns="http://www.w3.org/2000/svg"
-              width="70"
-              height="70"
-              viewBox="0 0 70 70"
-            >
-              <path
-                class="SuccessAnimationResult"
-                fill="#D8D8D8"
-                d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"
+          <div class="column is-6 is-offset-1">
+            <div class="template-image-wrapper">
+              <img
+                class="template-image light-image-block"
+                src="/img/demo/houseo-mockup-2.png"
+                alt="Houseo header image"
               />
-              <circle
-                class="SuccessAnimationCircle"
-                cx="35"
-                cy="35"
-                r="24"
-                stroke="#979797"
-                stroke-width="2"
-                stroke-linecap="round"
-                fill="transparent"
+              <img
+                class="template-image dark-image-block"
+                src="/img/demo/houseo-mockup-2-dark.png"
+                alt="Houseo header image"
               />
-              <polyline
-                class="SuccessAnimationCheck"
-                stroke="#979797"
-                stroke-width="2"
-                points="23 34 34 43 47 27"
-                fill="transparent"
-              />
-            </svg>
-            <h3 class="success-title">Application registered</h3>
-            <p class="success-text">
-              We've registered your project. One of our counselors will get in
-              touch with you very soon.
-            </p>
-          </div>
-          <div class="button-block is-vhidden">
-            <button class="button is-primary raised wizard-button is-disabled">
-              End
-            </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="section is-grey">
-  <div class="container">
-    <div class="parent mb-6">
-      <div
-        class="block frame-1x1 tomato has-background-image"
-        data-background="https://dummyimage.com/1600x900/ededed/000000"
-        data-demo-background="https://source.unsplash.com/-HxIhfS_dUk/500x880"
-      ></div>
-      <div
-        class="block frame-2x2 slateBlue has-background-image"
-        data-background="https://dummyimage.com/1600x900/ededed/000000"
-        data-demo-background="https://source.unsplash.com/fTEFBwIELQ0/1600x900"
-      ></div>
-      <div
-        class="block frame-1x2 orange has-background-image"
-        data-background="https://dummyimage.com/1600x900/ededed/000000"
-        data-demo-background="https://source.unsplash.com/OPnBJ5L2oxs/600x1000"
-      ></div>
-      <div
-        class="block frame-1x1 gray has-background-image"
-        data-background="https://dummyimage.com/1600x900/ededed/000000"
-        data-demo-background="https://source.unsplash.com/zxbNbuncq1g/1600x900"
-      ></div>
-      <div
-        class="block frame-2x1 dodgerBlue has-background-image"
-        data-background="https://dummyimage.com/1600x900/ededed/000000"
-        data-demo-background="https://source.unsplash.com/F6NvgzU3RfM/600x900"
-      ></div>
-      <div
-        class="block frame-2x1 gray has-background-image"
-        data-background="https://dummyimage.com/1600x900/ededed/000000"
-        data-demo-background="https://source.unsplash.com/kGs09BE5o3s/600x900"
-      ></div>
-      <div
-        class="block frame-3x1 mediumSeaGreen has-background-image"
-        data-background="https://dummyimage.com/1600x900/ededed/000000"
-        data-demo-background="https://source.unsplash.com/dMeEJRE18VI/600x900"
-      ></div>
-      <div
-        class="block frame-1x1 gray has-background-image"
-        data-background="https://dummyimage.com/1600x900/ededed/000000"
-        data-demo-background="https://source.unsplash.com/1o2071GOVp0/1600x900"
-      ></div>
-      <div
-        class="block frame-2x2 slateBlue has-background-image"
-        data-background="https://dummyimage.com/1600x900/ededed/000000"
-        data-demo-background="https://source.unsplash.com/4kTbAMRAHtQ/600x900"
-      ></div>
-      <div
-        class="block frame-1x1 gray has-background-image"
-        data-background="https://dummyimage.com/1600x900/ededed/000000"
-        data-demo-background="https://source.unsplash.com/UV81E0oXXWQ/600x900"
-      ></div>
-      <div
-        class="block frame-1x1 violet has-background-image"
-        data-background="https://dummyimage.com/1600x900/ededed/000000"
-        data-demo-background="https://source.unsplash.com/_M24lBh4H58/600x900"
-      ></div>
-      <div
-        class="block frame-1x1 gray has-background-image"
-        data-background="https://dummyimage.com/1600x900/ededed/000000"
-        data-demo-background="https://source.unsplash.com/K9HvrH3q1O4/600x900"
-      ></div>
-      <div
-        class="block frame-2x1 tomato has-background-image"
-        data-background="https://dummyimage.com/1600x900/ededed/000000"
-        data-demo-background="https://source.unsplash.com/jAA28GP8JVo/600x900"
-      ></div>
-      <div
-        class="block frame-1x1 gray has-background-image"
-        data-background="https://dummyimage.com/1600x900/ededed/000000"
-        data-demo-background="https://source.unsplash.com/SLtO8nL_x7U/600x900"
-      ></div>
+  <!--Footer-->
+  <footer class="template-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="https://cssninja.io" class="footer-logo">
+          <img
+            class="inverted-filter"
+            src="/img/logo/cssninja.svg"
+            alt="css ninja logo"
+          />
+          <span>&copy; 2022-2023</span>
+          <span>All Rights Reserved.</span>
+        </a>
+
+        <div class="footer-socials">
+          <a href="https://github.com/cssninjaStudio" class="social-link">
+            <i class="iconify" data-icon="fa:github"></i>
+            <span class="is-sr-only">GitHub</span>
+          </a>
+          <a href="https://www.facebook.com/cssninjaStudio" class="social-link">
+            <i class="iconify" data-icon="fa:facebook"></i>
+            <span class="is-sr-only">Facebook</span>
+          </a>
+          <a href="https://twitter.com/cssninjaStudio" class="social-link">
+            <i class="iconify" data-icon="fa:twitter"></i>
+            <span class="is-sr-only">Twitter</span>
+          </a>
+          <a href="https://dribbble.com/DrissChelouati" class="social-link">
+            <i class="iconify" data-icon="fa:dribbble"></i>
+            <span class="is-sr-only">Twitter</span>
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
+  </footer>
 </div>

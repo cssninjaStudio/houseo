@@ -1,0 +1,29 @@
+.side-video {
+  position: relative;
+  padding: 2rem 0;
+
+  .video-player-container {
+    margin-#{$start-direction}: 0;
+    margin-#{$end-direction}: 0;
+  }
+
+  .feature {
+    .iconify {
+      font-size: 2.25rem;
+      color: var(--primary);
+    }
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.3;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .side-video {
+    .video-player-container {
+      transform: scale(0.85);
+    }
+  }
+}

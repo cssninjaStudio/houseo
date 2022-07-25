@@ -9,7 +9,7 @@
 @use "sass:map";
 @use "snug" as * with
   (
-    $breakpoints: (
+    $breakpoint: (
       "mobile": 767px,
       "small": 768px,
       "large": 1024px,
@@ -27,6 +27,7 @@ $colors: (
   "orange": var(--orange),
   "blue": var(--blue),
   "purple": var(--purple),
+  "yellow": var(--yellow),
   "green": var(--green),
   "light": var(--light-text),
 );
@@ -107,8 +108,8 @@ $margin: map.merge(
 
   .px {
     @include options($spacing, $props...) using ($value) {
-      padding-right: $value;
-      padding-left: $value;
+      padding-#{$end-direction}: $value;
+      padding-#{$start-direction}: $value;
     }
   }
 
@@ -127,7 +128,7 @@ $margin: map.merge(
 
   .pr {
     @include options($spacing, $props...) using ($value) {
-      padding-right: $value;
+      padding-#{$end-direction}: $value;
     }
   }
 
@@ -139,7 +140,7 @@ $margin: map.merge(
 
   .pl {
     @include options($spacing, $props...) using ($value) {
-      padding-left: $value;
+      padding-#{$start-direction}: $value;
     }
   }
 
@@ -153,8 +154,8 @@ $margin: map.merge(
 
   .mx {
     @include options($margin, $props...) using ($value) {
-      margin-right: $value;
-      margin-left: $value;
+      margin-#{$end-direction}: $value;
+      margin-#{$start-direction}: $value;
     }
   }
 
@@ -173,7 +174,7 @@ $margin: map.merge(
 
   .mr {
     @include options($margin, $props...) using ($value) {
-      margin-right: $value;
+      margin-#{$end-direction}: $value;
     }
   }
 
@@ -185,7 +186,7 @@ $margin: map.merge(
 
   .ml {
     @include options($margin, $props...) using ($value) {
-      margin-left: $value;
+      margin-#{$start-direction}: $value;
     }
   }
 
@@ -199,8 +200,8 @@ $margin: map.merge(
 
   .-mx {
     @include options($spacing, $props...) using ($value) {
-      margin-right: -$value;
-      margin-left: -$value;
+      margin-#{$end-direction}: -$value;
+      margin-#{$start-direction}: -$value;
     }
   }
 
@@ -219,7 +220,7 @@ $margin: map.merge(
 
   .-mr {
     @include options($spacing, $props...) using ($value) {
-      margin-right: -$value;
+      margin-#{$end-direction}: -$value;
     }
   }
 
@@ -231,7 +232,7 @@ $margin: map.merge(
 
   .-ml {
     @include options($spacing, $props...) using ($value) {
-      margin-left: -$value;
+      margin-#{$start-direction}: -$value;
     }
   }
 }

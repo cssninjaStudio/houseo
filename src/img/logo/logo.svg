@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="1381.6 -2134 54.2 53.5" style="enable-background:new 1381.6 -2134 54.2 53.5;" xml:space="preserve">
+<!-- Generator: Adobe Illustrator 25.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 54.2 53.5" style="enable-background:new 0 0 54.2 53.5;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#434C5B;}
-	.st1{fill:#C1D1F8;}
-	.st2{fill:#0086FF;}
-	.st3{fill:#FF1F4F;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
+	.st1{fill:#8B90F7;}
+	.st2{fill:#2E31FF;}
+	.st3{fill:#A424FF;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}
 </style>
 <g id="Hero">
 </g>
@@ -19,13 +19,12 @@
 <g id="Section4">
 </g>
 <g id="Section5">
-	<circle class="st0" cx="1332.5" cy="-2250.9" r="1.6"/>
-	<path id="XMLID_475_" class="st1" d="M1397.1-2091.6h25.7c1,0,1.8-0.8,1.8-1.8v-19.3c0-0.5-0.2-0.9-0.5-1.3l-19.5-19.5
-		c-0.7-0.7-1.9-0.7-2.6,0l-20,20c-0.3,0.3-0.5,0.8-0.5,1.3v18.9c0,1,0.8,1.8,1.8,1.8H1397.1z"/>
-	<path id="XMLID_474_" class="st2" d="M1392.7-2082.4l0-29.8c0-0.5,0.2-1,0.5-1.3l19.9-19.9c0.7-0.7,1.9-0.7,2.6,0l19.5,19.5
-		c0.3,0.3,0.5,0.8,0.5,1.3v19.3c0,1-0.8,1.9-1.9,1.9h-25c-0.4,0-0.9,0.2-1.2,0.4l-12,10.1C1394.5-2080,1392.7-2080.8,1392.7-2082.4z
-		"/>
-	<circle class="st3" cx="1425.4" cy="-2124.3" r="5.1"/>
+	<circle class="st0" cx="-49.1" cy="-116.9" r="1.6"/>
+	<path id="XMLID_475_" class="st1" d="M15.5,42.4h25.7c1,0,1.8-0.8,1.8-1.8V21.3c0-0.5-0.2-0.9-0.5-1.3L23,0.5
+		c-0.7-0.7-1.9-0.7-2.6,0l-20,20c-0.3,0.3-0.5,0.8-0.5,1.3v18.9c0,1,0.8,1.8,1.8,1.8L15.5,42.4L15.5,42.4z"/>
+	<path id="XMLID_474_" class="st2" d="M11.1,51.6V21.8c0-0.5,0.2-1,0.5-1.3L31.5,0.6c0.7-0.7,1.9-0.7,2.6,0l19.5,19.5
+		c0.3,0.3,0.5,0.8,0.5,1.3v19.3c0,1-0.8,1.9-1.9,1.9h-25c-0.4,0-0.9,0.2-1.2,0.4L14,53.1C12.9,54,11.1,53.2,11.1,51.6z"/>
+	<circle class="st3" cx="43.8" cy="9.7" r="5.1"/>
 </g>
 <g id="Section6">
 </g>
