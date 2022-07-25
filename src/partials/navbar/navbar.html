@@ -37,6 +37,10 @@
           </div>
         </div>
       </div>
+
+      <template x-if="$store.app.isLoggedIn">
+        {{> account-menu-mobile}}
+      </template>
     </div>
 
     <div
