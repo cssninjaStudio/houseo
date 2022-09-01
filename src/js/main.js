@@ -18,18 +18,14 @@ Alpine.persistedStore("app", {
 //Start Alpine JS
 Alpine.start();
 
-import { env } from "./libs/utils/constants";
 import { initVideoPlayers } from "./libs/components/player/player";
-import { switchDemoImages, insertBgImages } from "./libs/utils/utils";
+import { insertBgImages } from "./libs/utils/utils";
 import { initLazyLoading } from "./libs/utils/lazyload";
 import "./libs/demo";
 import "./libs/components";
 
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
-    //Switch demo images
-    const changeImages = switchDemoImages(env);
-
     //Switch backgrounds
     const changeBackgrounds = insertBgImages();
 
@@ -37,11 +33,11 @@ document.onreadystatechange = function () {
     const lazy = initLazyLoading();
 
     //Video Players
-    const players = initVideoPlayers(env);
+    const players = initVideoPlayers();
 
     //Image zoom
     const zoom = document.querySelector("[data-zoom]");
-    if (typeof (zoom) != 'undefined' && zoom != null) {
+    if (typeof zoom != "undefined" && zoom != null) {
       mediumZoom("[data-zoom]");
     }
   }

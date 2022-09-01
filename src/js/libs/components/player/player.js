@@ -1,6 +1,6 @@
 import Plyr from "plyr";
 
-export function initVideoPlayers(environment) {
+export function initVideoPlayers() {
   const player = document.querySelector(".video-player");
 
   if (typeof player != "undefined" && player != null) {
