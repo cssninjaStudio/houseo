@@ -15,7 +15,7 @@ Houseo is built with [Bulma](https://bulma.io) and [Alpine JS](https://github.co
 
 ## 👌 Usage
 
-1. Install Depedencies
+1. Install depedencies
 
 ```sh
 pnpm i
