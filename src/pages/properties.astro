@@ -1,0 +1,650 @@
+---
+import Layout from '../layouts/Default.astro';
+const title = 'Properties'
+---
+
+<Layout title={title}>
+  <div class="hero is-grey search-hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-12">
+            <div class="hero-search-centered">
+              <div class="has-text-centered">
+                <h1 class="title is-1 is-thin">Explore Properties</h1>
+                <h2 class="subtitle is-5">
+                  We help you find the perfect space for you and your family.
+                </h2>
+              </div>
+              <div class="hero-search" x-data="{ activeTab: 'buy' }">
+                <div class="tabs is-boxed">
+                  <ul>
+                    <li :class="activeTab === 'buy' && 'is-active'">
+                      <a @click.prevent="activeTab = 'buy'">
+                        <span>Buy</span>
+                      </a>
+                    </li>
+                    <li :class="activeTab === 'rent' && 'is-active'">
+                      <a @click.prevent="activeTab = 'rent'">
+                        <span>Rent</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="search-bar">
+                  <div class="search-bar-inner">
+                    <div class="control has-icon">
+                      <div class="select">
+                        <select>
+                          <option>Property type</option>
+                          <option>Private residence</option>
+                          <option>Private house</option>
+                          <option>Apartment</option>
+                          <option>Mansion</option>
+                        </select>
+                        <div class="form-icon">
+                          <i class="iconify" data-icon="lucide:home"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="control has-icon">
+                      <input
+                        type="text"
+                        class="input"
+                        placeholder="Search by location"
+                      />
+                      <div class="form-icon">
+                        <i class="iconify" data-icon="lucide:search"></i>
+                      </div>
+                    </div>
+                    <div class="control">
+                      <button type="button" class="button is-primary raised">
+                        Search
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="search-bar-settings">
+                  <label for="new-properties" class="f-switch is-primary">
+                    <input id="new-properties" type="checkbox" />
+                    <i></i>
+                  </label>
+
+                  <p>Only include new properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section is-grey">
+    <div class="container">
+      <div class="icon-title">
+        <div class="title-content">
+          <h2 class="title is-4">Available properties</h2>
+          <h4 class="subtitle is-6">We found 345 matching properties</h4>
+        </div>
+
+        <div class="title-actions">
+          <div class="control has-icon">
+            <input type="text" class="input" placeholder="Filter..." />
+            <div class="form-icon">
+              <i class="iconify" data-icon="lucide:search"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="property-cards">
+        <div class="columns is-multiline b-columns-half-tablet-p">
+          <!-- Property -->
+          <div class="column is-4">
+            <a href="#" class="property-card">
+              <img src="/img/photo/properties/1.jpg" alt="showcase photo" />
+              <div class="property-content">
+                <div class="property-info">
+                  <h3 class="title is-5 is-narrow is-bold">$240,000 USD</h3>
+                  <p>14, Greenwalk passage, San Diego</p>
+                </div>
+                <div class="property-details">
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bed-double"></i>
+                      <span>3</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bedrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bath"></i>
+                      <span>2</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bathrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:box-select"></i>
+                      <span>190m²</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Living Area</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Property -->
+          <div class="column is-4">
+            <a href="#" class="property-card">
+              <img src="/img/photo/properties/2.jpg" alt="showcase photo" />
+              <div class="property-content">
+                <div class="property-info">
+                  <h3 class="title is-5 is-narrow is-bold">$135,000 USD</h3>
+                  <p>27, San Sebastian Av, San Diego</p>
+                </div>
+                <div class="property-details">
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bed-double"></i>
+                      <span>2</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bedrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bath"></i>
+                      <span>1</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bathrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:box-select"></i>
+                      <span>125m²</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Living Area</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Property -->
+          <div class="column is-4">
+            <a href="#" class="property-card">
+              <img src="/img/photo/properties/3.jpg" alt="showcase photo" />
+              <div class="property-content">
+                <div class="property-info">
+                  <h3 class="title is-5 is-narrow is-bold">$320,000 USD</h3>
+                  <p>57, Parkway Plaza, Los Angeles</p>
+                </div>
+                <div class="property-details">
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bed-double"></i>
+                      <span>4</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bedrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bath"></i>
+                      <span>3</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bathrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:box-select"></i>
+                      <span>320m²</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Living Area</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Property -->
+          <div class="column is-4">
+            <a href="#" class="property-card">
+              <img src="/img/photo/properties/4.jpg" alt="showcase photo" />
+              <div class="property-content">
+                <div class="property-info">
+                  <h3 class="title is-5 is-narrow is-bold">$95,000 USD</h3>
+                  <p>Camino Madruga, San Diego</p>
+                </div>
+                <div class="property-details">
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bed-double"></i>
+                      <span>2</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bedrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bath"></i>
+                      <span>1</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bathrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:box-select"></i>
+                      <span>110m²</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Living Area</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Property -->
+          <div class="column is-4">
+            <a href="#" class="property-card">
+              <img src="/img/photo/properties/5.jpg" alt="showcase photo" />
+              <div class="property-content">
+                <div class="property-info">
+                  <h3 class="title is-5 is-narrow is-bold">$275,000 USD</h3>
+                  <p>59, San Marino Av, San Diego</p>
+                </div>
+                <div class="property-details">
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bed-double"></i>
+                      <span>4</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bedrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bath"></i>
+                      <span>3</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bathrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:box-select"></i>
+                      <span>290m²</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Living Area</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Property -->
+          <div class="column is-4">
+            <a href="#" class="property-card">
+              <img src="/img/photo/properties/6.jpg" alt="showcase photo" />
+              <div class="property-content">
+                <div class="property-info">
+                  <h3 class="title is-5 is-narrow is-bold">$185,000 USD</h3>
+                  <p>9, Santa Maria St, San Francisco</p>
+                </div>
+                <div class="property-details">
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bed-double"></i>
+                      <span>3</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bedrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bath"></i>
+                      <span>1</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bathrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:box-select"></i>
+                      <span>150m²</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Living Area</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Property -->
+          <div class="column is-4">
+            <a href="#" class="property-card">
+              <img src="/img/photo/properties/7.jpg" alt="showcase photo" />
+              <div class="property-content">
+                <div class="property-info">
+                  <h3 class="title is-5 is-narrow is-bold">$290,000 USD</h3>
+                  <p>48, Long Beach road, San Diego</p>
+                </div>
+                <div class="property-details">
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bed-double"></i>
+                      <span>5</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bedrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bath"></i>
+                      <span>3</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bathrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:box-select"></i>
+                      <span>350m²</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Living Area</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Property -->
+          <div class="column is-4">
+            <a href="#" class="property-card">
+              <img src="/img/photo/properties/8.jpg" alt="showcase photo" />
+              <div class="property-content">
+                <div class="property-info">
+                  <h3 class="title is-5 is-narrow is-bold">$175,000 USD</h3>
+                  <p>22, Milton Av, Los Angeles</p>
+                </div>
+                <div class="property-details">
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bed-double"></i>
+                      <span>2</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bedrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bath"></i>
+                      <span>2</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bathrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:box-select"></i>
+                      <span>130m²</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Living Area</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Property -->
+          <div class="column is-4">
+            <a href="#" class="property-card">
+              <img src="/img/photo/properties/9.jpg" alt="showcase photo" />
+              <div class="property-content">
+                <div class="property-info">
+                  <h3 class="title is-5 is-narrow is-bold">$225,000 USD</h3>
+                  <p>89, Michael Zhang Av, Los Angeles</p>
+                </div>
+                <div class="property-details">
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bed-double"></i>
+                      <span>4</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bedrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bath"></i>
+                      <span>2</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bathrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:box-select"></i>
+                      <span>225m²</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Living Area</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Property -->
+          <div class="column is-4">
+            <a href="#" class="property-card">
+              <img src="/img/photo/properties/10.jpg" alt="showcase photo" />
+              <div class="property-content">
+                <div class="property-info">
+                  <h3 class="title is-5 is-narrow is-bold">$325,000 USD</h3>
+                  <p>21, Santa Maria Av, Los Angeles</p>
+                </div>
+                <div class="property-details">
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bed-double"></i>
+                      <span>3</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bedrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bath"></i>
+                      <span>3</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bathrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:box-select"></i>
+                      <span>195m²</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Living Area</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Property -->
+          <div class="column is-4">
+            <a href="#" class="property-card">
+              <img src="/img/photo/properties/11.png" alt="showcase photo" />
+              <div class="property-content">
+                <div class="property-info">
+                  <h3 class="title is-5 is-narrow is-bold">$145,000 USD</h3>
+                  <p>55, Milton Roger St, Los Angeles</p>
+                </div>
+                <div class="property-details">
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bed-double"></i>
+                      <span>2</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bedrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bath"></i>
+                      <span>1</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bathrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:box-select"></i>
+                      <span>165m²</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Living Area</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Property -->
+          <div class="column is-4">
+            <a href="#" class="property-card">
+              <img src="/img/photo/properties/12.jpg" alt="showcase photo" />
+              <div class="property-content">
+                <div class="property-info">
+                  <h3 class="title is-5 is-narrow is-bold">$395,000 USD</h3>
+                  <p>78, Highway Park, Los Angeles</p>
+                </div>
+                <div class="property-details">
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bed-double"></i>
+                      <span>5</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bedrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:bath"></i>
+                      <span>4</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Bathrooms</p>
+                    </div>
+                  </div>
+                  <div class="property-detail">
+                    <div class="detail-head">
+                      <i class="iconify" data-icon="lucide:box-select"></i>
+                      <span>310m²</span>
+                    </div>
+                    <div class="detail-content">
+                      <p>Living Area</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-6">
+        <nav class="pagination" role="navigation" aria-label="pagination">
+          <a class="pagination-previous">
+            <i class="iconify" data-icon="lucide:arrow-left"></i>
+          </a>
+          <a class="pagination-next">
+            <i class="iconify" data-icon="lucide:arrow-right"></i>
+          </a>
+          <ul class="pagination-list">
+            <li>
+              <a class="pagination-link" aria-label="Goto page 1">1</a>
+            </li>
+            <li>
+              <span class="pagination-ellipsis">&hellip;</span>
+            </li>
+            <li>
+              <a class="pagination-link" aria-label="Goto page 45">45</a>
+            </li>
+            <li>
+              <a
+                class="pagination-link is-current"
+                aria-label="Page 46"
+                aria-current="page"
+                >46</a
+              >
+            </li>
+            <li>
+              <a class="pagination-link" aria-label="Goto page 47">47</a>
+            </li>
+            <li>
+              <span class="pagination-ellipsis">&hellip;</span>
+            </li>
+            <li>
+              <a class="pagination-link" aria-label="Goto page 86">86</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</Layout>

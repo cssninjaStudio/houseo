@@ -5,7 +5,7 @@ export function initLogin() {
       this.isLoading = true;
       setTimeout(() => {
         this.$store.app.isLoggedIn = true;
-        window.location.href = "/home.html";
+        window.location.href = "/home";
       }, 1500);
     },
   };
@@ -18,7 +18,7 @@ export function initLogout() {
       this.isLoading = true;
       setTimeout(() => {
         this.$store.app.isLoggedIn = false;
-        window.location.href = "/home.html";
+        window.location.href = "/home";
       }, 200);
     },
   };

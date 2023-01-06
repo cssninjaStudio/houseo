@@ -1,0 +1,53 @@
+<div
+  class="account-dropdown dropdown is-spaced is-right"
+  :class="open && 'is-active'"
+  x-data="initDropdown()"
+  @click.away="close()"
+>
+  <div class="dropdown-trigger">
+    <button class="button" aria-haspopup="true" @click="toggle()">
+      <img src="/img/avatars/4.jpg" alt="avatar" />
+    </button>
+  </div>
+  <div class="dropdown-menu" role="menu" x-data="initLogout()">
+    <div class="dropdown-content">
+      <div class="dropdown-item">
+        <a href="/account" class="menu-option">
+          <i class="iconify" data-icon="lucide:user"></i>
+          <div class="meta">
+            <h4>Account</h4>
+            <p>Manage account</p>
+          </div>
+        </a>
+      </div>
+      <div class="dropdown-item">
+        <a href="/wishlist" class="menu-option">
+          <i class="iconify" data-icon="lucide:heart"></i>
+          <div class="meta">
+            <h4>Wishlist</h4>
+            <p>View favorites</p>
+          </div>
+        </a>
+      </div>
+      <div class="dropdown-item">
+        <a href="/settings" class="menu-option">
+          <i class="iconify" data-icon="lucide:settings"></i>
+          <div class="meta">
+            <h4>Settings</h4>
+            <p>Manage preferences</p>
+          </div>
+        </a>
+      </div>
+      <hr class="dropdown-divider" />
+      <div class="dropdown-item">
+        <a class="menu-option" @click.prevent="logout()">
+          <i class="iconify" data-icon="feather:log-out"></i>
+          <div class="meta">
+            <h4>Logout</h4>
+            <p>Logout from account</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

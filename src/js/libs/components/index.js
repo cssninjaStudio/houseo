@@ -6,6 +6,7 @@ import { initFaqAccordion } from './accordion/accordion';
 import { initDropdown } from './dropdown/dropdown';
 import { initLogin, initLogout } from './auth/login';
 import { initBackToTop } from "./backtotop/backtotop";
+import { initHomeSwiper, initProjectsSwiper } from './swiper/swiper'
 
 window.initTheme = initTheme;
 window.initNavbar = initNavbar;
@@ -17,3 +18,5 @@ window.initDropdown = initDropdown;
 window.initLogin = initLogin;
 window.initLogout = initLogout;
 window.initBackToTop = initBackToTop;
+window.initHomeSwiper = initHomeSwiper;
+window.initProjectsSwiper = initProjectsSwiper;

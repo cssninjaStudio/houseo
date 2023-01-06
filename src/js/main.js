@@ -1,9 +1,9 @@
-"use strict";
-
 //Alpine JS and plugins import
 import Alpine from "alpinejs";
 import intersect from "@alpinejs/intersect";
 import persist from "@alpinejs/persist";
+import mediumZoom from 'medium-zoom'
+import Iconify from '@iconify/iconify';
 
 window.Alpine = Alpine;
 //Init intersect plugin

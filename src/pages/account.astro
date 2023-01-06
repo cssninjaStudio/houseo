@@ -1,0 +1,231 @@
+---
+import Layout from '../layouts/Default.astro';
+const title = 'Account'
+---
+
+<Layout title={title}>
+  <div class="section">
+    <div class="container">
+      <div class="account-app">
+        <div class="account-header">
+          <img src="/img/avatars/4.jpg" class="header-avatar" alt="avatar" />
+          <div class="header-meta">
+            <h2 class="title is-3 is-thin">Account</h2>
+            <h4 class="subtitle is-5 stressed-1">Welcome back, Henry M.</h4>
+          </div>
+        </div>
+
+        <div class="account-categories py-6">
+          <div class="columns is-multiline b-columns-half-tablet-p">
+            <!--Category-->
+            <div class="column is-4">
+              <a href="/settings" class="card is-block">
+                <div class="card-content">
+                  <div class="card-icon">
+                    <i
+                      class="iconify text-danger"
+                      data-icon="ph:heartbeat-duotone"
+                    ></i>
+                  </div>
+                  <h3 class="title is-6 has-space">
+                    <span class="icon-text">
+                      <span>Personal Info </span>
+                      <span class="icon">
+                        <i data-feather="chevron-right"></i>
+                      </span>
+                    </span>
+                  </h3>
+                  <p>
+                    We want to know more about you. Let us know about all of your
+                    personal details and how we can reach out to you.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <!--Category-->
+            <div class="column is-4">
+              <a href="/settings" class="card is-block">
+                <div class="card-content">
+                  <div class="card-icon">
+                    <i
+                      class="iconify text-success"
+                      data-icon="ph:shield-check-duotone"
+                    ></i>
+                  </div>
+                  <h3 class="title is-6 has-space">
+                    <span class="icon-text">
+                      <span>Account & Security</span>
+                      <span class="icon">
+                        <i data-feather="chevron-right"></i>
+                      </span>
+                    </span>
+                  </h3>
+                  <p>
+                    Update your password and secure your account. You can also
+                    enable two-factor authentication for enhanced security.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <!--Category-->
+            <div class="column is-4">
+              <a href="/settings" class="card is-block">
+                <div class="card-content">
+                  <div class="card-icon">
+                    <i
+                      class="iconify text-info"
+                      data-icon="ph:credit-card-duotone"
+                    ></i>
+                  </div>
+                  <h3 class="title is-6 has-space">
+                    <span class="icon-text">
+                      <span>Payments</span>
+                      <span class="icon">
+                        <i data-feather="chevron-right"></i>
+                      </span>
+                    </span>
+                  </h3>
+                  <p>
+                    View your payments, your payment methods and your
+                    transactions. Also view coupon codes, gift cards and tax
+                    reports.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <!--Category-->
+            <div class="column is-4">
+              <a href="/settings" class="card is-block">
+                <div class="card-content">
+                  <div class="card-icon">
+                    <i
+                      class="iconify text-yellow"
+                      data-icon="ph:bell-ringing-duotone"
+                    ></i>
+                  </div>
+                  <h3 class="title is-6 has-space">
+                    <span class="icon-text">
+                      <span>Notifications</span>
+                      <span class="icon">
+                        <i data-feather="chevron-right"></i>
+                      </span>
+                    </span>
+                  </h3>
+                  <p>
+                    Decide of your notification preferences and the different ways
+                    that people should use to reach out to you.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <!--Category-->
+            <div class="column is-4">
+              <a href="/settings" class="card is-block">
+                <div class="card-content">
+                  <div class="card-icon">
+                    <i
+                      class="iconify text-primary"
+                      data-icon="ph:lock-duotone"
+                    ></i>
+                  </div>
+                  <h3 class="title is-6 has-space">
+                    <span class="icon-text">
+                      <span>Privacy</span>
+                      <span class="icon">
+                        <i data-feather="chevron-right"></i>
+                      </span>
+                    </span>
+                  </h3>
+                  <p>
+                    Control all your connected apps and how they access your
+                    information. Control what you share and who has access.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <!--Category-->
+            <div class="column is-4">
+              <a href="/settings" class="card is-block">
+                <div class="card-content">
+                  <div class="card-icon">
+                    <i
+                      class="iconify text-purple"
+                      data-icon="ph:gear-six-duotone"
+                    ></i>
+                  </div>
+                  <h3 class="title is-6 has-space">
+                    <span class="icon-text">
+                      <span>Global Settings</span>
+                      <span class="icon">
+                        <i data-feather="chevron-right"></i>
+                      </span>
+                    </span>
+                  </h3>
+                  <p>
+                    Select your timezone, your main currency for payments and your
+                    default language. You can change this whenever you want.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <!--Category-->
+            <div class="column is-4">
+              <a href="/settings" class="card is-block">
+                <div class="card-content">
+                  <div class="card-icon">
+                    <i
+                      class="iconify text-success"
+                      data-icon="ph:buildings-duotone"
+                    ></i>
+                  </div>
+                  <h3 class="title is-6 has-space">
+                    <span class="icon-text">
+                      <span>Dashboard</span>
+                      <span class="icon">
+                        <i data-feather="chevron-right"></i>
+                      </span>
+                    </span>
+                  </h3>
+                  <p>
+                    Use our professional tools to manage your houses, your residences
+                    and the transactions you offer on our platform.
+                  </p>
+                </div>
+              </a>
+            </div>
+            <!--Category-->
+            <div class="column is-4">
+              <a href="/settings" class="card is-block">
+                <div class="card-content">
+                  <div class="card-icon">
+                    <i
+                      class="iconify text-yellow"
+                      data-icon="ph:crown-duotone"
+                    ></i>
+                  </div>
+                  <h3 class="title is-6 has-space">
+                    <span class="icon-text">
+                      <span>Houseo Premium</span>
+                      <span class="icon">
+                        <i data-feather="chevron-right"></i>
+                      </span>
+                    </span>
+                  </h3>
+                  <p>
+                    Add a professional email account so you can start benefiting
+                    from pro offers and business oriented housing.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="py-6 has-text-centered">
+          <p class="text-light mb-2">Need yo disable your account?</p>
+          <a class="slide-link">Disable Account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
