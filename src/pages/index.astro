@@ -348,7 +348,7 @@ const title = 'Real Estate HTML Template'
 									<div class="max-w-4 mb-5">
 										<h2 class="title is-3 is-bold is-leading">Demo Pages</h2>
 										<p class="paragraph">
-											Houseo ships with more than 13 superb demo pages to help you
+											Houseo ships with more than <span x-text="initRenderDemos().screenshots.length"></span> superb demo pages to help you
 											get started as fast as possible, and build an outstanding
 											and memorable project.
 										</p>
@@ -552,110 +552,9 @@ const title = 'Real Estate HTML Template'
 							</div>
 						</div>
 						<div class="column is-4">
-							<div x-data="initPurchaseCard()" class="purchase-card">
-								<div class="purchase-card-tabs">
-									<div class="inner-tabs">
-										<a
-											data-tab="starter"
-											@click.prevent="toggleTabs($event)"
-											:class="{
-												'is-active': activeTab === 'starter'
-											}"
-											>Starter</a
-										>
-										<a
-											data-tab="developer"
-											@click.prevent="toggleTabs($event)"
-											:class="{
-												'is-active': activeTab === 'developer'
-											}"
-											>Developer</a
-										>
-										<a
-											data-tab="business"
-											@click.prevent="toggleTabs($event)"
-											:class="{
-												'is-active': activeTab === 'business'
-											}"
-											>Business</a
-										>
-										<span class="naver"></span>
-									</div>
-	
-									<div class="inner-tabs-content">
-										<div class="inner-content">
-											<!--Starter price-->
-											<div x-show="activeTab === 'starter'" class="price-block">
-												<h3 class="price-value">$49</h3>
-												<div class="price-meta">
-													<h4>Starter license</h4>
-													<p class="paragraph rem-85">
-														Use this template on a single domain / subdomain.
-													</p>
-												</div>
-											</div>
-	
-											<!--Developer price-->
-											<div x-show="activeTab === 'developer'" class="price-block">
-												<h3 class="price-value">$69</h3>
-												<div class="price-meta">
-													<h4>Developer license</h4>
-													<p class="paragraph rem-85">
-														Same as starter license with private Github access.
-													</p>
-												</div>
-											</div>
-	
-											<!--Business price-->
-											<div x-show="activeTab === 'business'" class="price-block">
-												<h3 class="price-value">$349</h3>
-												<div class="price-meta">
-													<h4>Business license</h4>
-													<p class="paragraph rem-85">
-														Use this template on unlimited domains / subdomains.
-													</p>
-												</div>
-											</div>
-	
-											<!--Benefits-->
-											<div class="benefits">
-												<ul>
-													<li x-show="activeTab !== 'business'">
-														<span>Up to 1 domain / subdomain</span>
-													</li>
-													<li x-show="activeTab === 'business'">
-														<span>Unlimited domains / subdomains</span>
-													</li>
-													<li
-														:class="{
-															'text-linethrough is-disabled': activeTab === 'starter'
-														}"
-													>
-														<span>Access to Github repository</span>
-													</li>
-													<li>
-														<span>Lifetime updates</span>
-													</li>
-													<li x-show="activeTab !== 'starter'">
-														<span>6 months included support</span>
-													</li>
-													<li x-show="activeTab === 'starter'">
-														<span>Community support</span>
-													</li>
-												</ul>
-											</div>
-	
-											<!--Action-->
-											<div class="purchase-action">
-												<a
-													href="https://go.cssninja.io/buy-houseo"
-													class="button is-primary is-fullwidth raised"
-													>Purchase Now</a
-												>
-											</div>
-										</div>
-									</div>
-								</div>
+							<div class="purchase-card">
+								<div data-cssninja-widget="add-to-cart" data-cssninja-template="houseo"></div>
+								<script src="https://widgets.cssninja.io/init.js" module async defer></script>
 							</div>
 						</div>
 					</div>
