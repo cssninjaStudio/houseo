@@ -13,7 +13,7 @@ Alpine.plugin(persist);
 //Init store
 Alpine.store("app", {
   init() {
-    this.on = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    this.isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   },
   isDark: Alpine.$persist(false),
   isLoggedIn: Alpine.$persist(false),

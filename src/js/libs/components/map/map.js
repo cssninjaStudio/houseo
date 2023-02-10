@@ -1,6 +1,7 @@
+import mapboxgl from 'mapbox-gl'
+const token = import.meta.env.PUBLIC_MAPBOX_ACCESS_TOKEN; // Replace this with your own mapbox token
+
 export function initSmallMap() {
-  const token =
-    "pk.eyJ1IjoiY3NzbmluamEiLCJhIjoiY2toZW1nYm0zMDAxODJycXFzZ3g4cnZ6diJ9.9ebfrGREuwkauRr_afDTgA";
   const markerOptions = {
     color: "red",
   };
@@ -16,9 +17,10 @@ export function initSmallMap() {
       );
       const smallMap = new mapboxgl.Map({
         container: "small-map",
-        style: this.$store.app.isDark === true
-          ? "mapbox://styles/mapbox/dark-v10"
-          : "mapbox://styles/mapbox/light-v10",
+        style:
+          this.$store.app.isDark === true
+            ? "mapbox://styles/mapbox/dark-v10"
+            : "mapbox://styles/mapbox/light-v10",
         center: [longitude, latitude],
         zoom: 12,
       });
@@ -33,8 +35,6 @@ export function initSmallMap() {
 }
 
 export function initContactMap() {
-  const token =
-    "pk.eyJ1IjoiY3NzbmluamEiLCJhIjoiY2toZW1nYm0zMDAxODJycXFzZ3g4cnZ6diJ9.9ebfrGREuwkauRr_afDTgA";
   const markerOptions = {
     color: "red",
   };
@@ -50,9 +50,10 @@ export function initContactMap() {
       );
       const mainMap = new mapboxgl.Map({
         container: "hero-map",
-        style: this.$store.app.isDark === true
-          ? "mapbox://styles/mapbox/dark-v10"
-          : "mapbox://styles/mapbox/light-v10",
+        style:
+          this.$store.app.isDark === true
+            ? "mapbox://styles/mapbox/dark-v10"
+            : "mapbox://styles/mapbox/light-v10",
         center: [longitude, latitude],
         zoom: 12,
       });
