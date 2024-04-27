@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/cssninjaStudio/houseo/compare/v3.1.1...v3.2.0) (2024-04-27)
+
+
+### Features
+
+* migrate to iconify-icon, update dependencies ([f6facf6](https://github.com/cssninjaStudio/houseo/commit/f6facf6a359c86bd899f047814234d2bc9b557ae))
+
 ### [3.1.1](https://github.com/cssninjaStudio/houseo/compare/v3.1.0...v3.1.1) (2023-05-03)
 
 ## [3.1.0](https://github.com/cssninjaStudio/houseo/compare/v3.0.0...v3.1.0) (2023-02-10)
