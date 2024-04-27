@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Default.astro';
+import Layout from '../layouts/Default.astro'
 const title = 'Wishlist'
 ---
 
@@ -12,15 +12,9 @@ const title = 'Wishlist'
             <div class="page-placeholder-inner">
               <img src="/img/illustrations/placeholder.svg" alt="" />
               <h3 class="title is-5 is-leading">Wishlist not available</h3>
-              <p>
-                Wishlists are only available to logged in users. Please login to
-                your account. If you don't have an account, go ahead and create
-                one.
-              </p>
+              <p>Wishlists are only available to logged in users. Please login to your account. If you don't have an account, go ahead and create one.</p>
               <div class="buttons is-centered">
-                <a href="/login" class="button is-primary raised is-long-2"
-                  >Login</a
-                >
+                <a href="/login" class="button is-primary raised is-long-2">Login</a>
                 <a href="/home" class="button is-long-2">Back Home</a>
               </div>
             </div>
@@ -31,11 +25,7 @@ const title = 'Wishlist'
       <template x-if="$store.app.isLoggedIn">
         <div class="account-app">
           <div class="account-header">
-            <img
-              class="header-avatar"
-              src="/img/avatars/4.jpg"
-              alt="Account photo"
-            />
+            <img class="header-avatar" src="/img/avatars/4.jpg" alt="Account photo" />
             <div class="header-meta">
               <h2 class="title is-3 is-thin">Wishlist</h2>
               <h4 class="subtitle is-5 stressed-1">Properties that you liked</h4>
@@ -46,10 +36,7 @@ const title = 'Wishlist'
             <div class="tabs-wrapper">
               <div class="tabs">
                 <ul>
-                  <li
-                    class="is-active"
-                    x-bind:class="{'is-active': activeTab === 'rent'}"
-                  >
+                  <li class="is-active" x-bind:class="{'is-active': activeTab === 'rent'}">
                     <a x-on:click.prevent="activeTab = 'rent'">Rent</a>
                   </li>
                   <li x-bind:class="{'is-active': activeTab === 'buy'}">
@@ -63,10 +50,7 @@ const title = 'Wishlist'
                 <div x-show.transition="activeTab === 'rent'" class="tab-content">
                   <div class="tab-placeholder">
                     <p class="mb-5">
-                      <span
-                        >Looks like you didn't add properties to rent to your
-                        wishlist.</span
-                      >
+                      <span>Looks like you didn't add properties to rent to your wishlist.</span>
                       <a class="slide-link ml-2">Learn more</a>
                     </p>
                     <img src="img/illustrations/cityline.svg" alt="" />
@@ -86,24 +70,16 @@ const title = 'Wishlist'
                       <!-- Property -->
                       <div class="column is-4">
                         <a href="#" class="property-card">
-                          <img
-                            src="/img/photo/properties/1.jpg"
-                            alt="showcase photo"
-                          />
+                          <img src="/img/photo/properties/1.jpg" alt="showcase photo" />
                           <div class="property-content">
                             <div class="property-info">
-                              <h3 class="title is-5 is-narrow is-bold">
-                                $240,000 USD
-                              </h3>
+                              <h3 class="title is-5 is-narrow is-bold">$240,000 USD</h3>
                               <p>14, Greenwalk passage, San Diego</p>
                             </div>
                             <div class="property-details">
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i
-                                    class="iconify"
-                                    data-icon="lucide:bed-double"
-                                  ></i>
+                                  <iconify-icon class="iconify" icon="lucide:bed-double"></iconify-icon>
                                   <span>3</span>
                                 </div>
                                 <div class="detail-content">
@@ -112,7 +88,7 @@ const title = 'Wishlist'
                               </div>
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i class="iconify" data-icon="lucide:bath"></i>
+                                  <iconify-icon class="iconify" icon="lucide:bath"></iconify-icon>
                                   <span>2</span>
                                 </div>
                                 <div class="detail-content">
@@ -121,10 +97,7 @@ const title = 'Wishlist'
                               </div>
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i
-                                    class="iconify"
-                                    data-icon="lucide:box-select"
-                                  ></i>
+                                  <iconify-icon class="iconify" icon="lucide:box-select"></iconify-icon>
                                   <span>190m²</span>
                                 </div>
                                 <div class="detail-content">
@@ -139,24 +112,16 @@ const title = 'Wishlist'
                       <!-- Property -->
                       <div class="column is-4">
                         <a href="#" class="property-card">
-                          <img
-                            src="/img/photo/properties/2.jpg"
-                            alt="showcase photo"
-                          />
+                          <img src="/img/photo/properties/2.jpg" alt="showcase photo" />
                           <div class="property-content">
                             <div class="property-info">
-                              <h3 class="title is-5 is-narrow is-bold">
-                                $135,000 USD
-                              </h3>
+                              <h3 class="title is-5 is-narrow is-bold">$135,000 USD</h3>
                               <p>27, San Sebastian Av, San Diego</p>
                             </div>
                             <div class="property-details">
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i
-                                    class="iconify"
-                                    data-icon="lucide:bed-double"
-                                  ></i>
+                                  <iconify-icon class="iconify" icon="lucide:bed-double"></iconify-icon>
                                   <span>2</span>
                                 </div>
                                 <div class="detail-content">
@@ -165,7 +130,7 @@ const title = 'Wishlist'
                               </div>
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i class="iconify" data-icon="lucide:bath"></i>
+                                  <iconify-icon class="iconify" icon="lucide:bath"></iconify-icon>
                                   <span>1</span>
                                 </div>
                                 <div class="detail-content">
@@ -174,10 +139,7 @@ const title = 'Wishlist'
                               </div>
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i
-                                    class="iconify"
-                                    data-icon="lucide:box-select"
-                                  ></i>
+                                  <iconify-icon class="iconify" icon="lucide:box-select"></iconify-icon>
                                   <span>125m²</span>
                                 </div>
                                 <div class="detail-content">
@@ -192,24 +154,16 @@ const title = 'Wishlist'
                       <!-- Property -->
                       <div class="column is-4">
                         <a href="#" class="property-card">
-                          <img
-                            src="/img/photo/properties/3.jpg"
-                            alt="showcase photo"
-                          />
+                          <img src="/img/photo/properties/3.jpg" alt="showcase photo" />
                           <div class="property-content">
                             <div class="property-info">
-                              <h3 class="title is-5 is-narrow is-bold">
-                                $320,000 USD
-                              </h3>
+                              <h3 class="title is-5 is-narrow is-bold">$320,000 USD</h3>
                               <p>57, Parkway Plaza, Los Angeles</p>
                             </div>
                             <div class="property-details">
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i
-                                    class="iconify"
-                                    data-icon="lucide:bed-double"
-                                  ></i>
+                                  <iconify-icon class="iconify" icon="lucide:bed-double"></iconify-icon>
                                   <span>4</span>
                                 </div>
                                 <div class="detail-content">
@@ -218,7 +172,7 @@ const title = 'Wishlist'
                               </div>
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i class="iconify" data-icon="lucide:bath"></i>
+                                  <iconify-icon class="iconify" icon="lucide:bath"></iconify-icon>
                                   <span>3</span>
                                 </div>
                                 <div class="detail-content">
@@ -227,10 +181,7 @@ const title = 'Wishlist'
                               </div>
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i
-                                    class="iconify"
-                                    data-icon="lucide:box-select"
-                                  ></i>
+                                  <iconify-icon class="iconify" icon="lucide:box-select"></iconify-icon>
                                   <span>320m²</span>
                                 </div>
                                 <div class="detail-content">
@@ -245,24 +196,16 @@ const title = 'Wishlist'
                       <!-- Property -->
                       <div class="column is-4">
                         <a href="#" class="property-card">
-                          <img
-                            src="/img/photo/properties/4.jpg"
-                            alt="showcase photo"
-                          />
+                          <img src="/img/photo/properties/4.jpg" alt="showcase photo" />
                           <div class="property-content">
                             <div class="property-info">
-                              <h3 class="title is-5 is-narrow is-bold">
-                                $95,000 USD
-                              </h3>
+                              <h3 class="title is-5 is-narrow is-bold">$95,000 USD</h3>
                               <p>Camino Madruga, San Diego</p>
                             </div>
                             <div class="property-details">
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i
-                                    class="iconify"
-                                    data-icon="lucide:bed-double"
-                                  ></i>
+                                  <iconify-icon class="iconify" icon="lucide:bed-double"></iconify-icon>
                                   <span>2</span>
                                 </div>
                                 <div class="detail-content">
@@ -271,7 +214,7 @@ const title = 'Wishlist'
                               </div>
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i class="iconify" data-icon="lucide:bath"></i>
+                                  <iconify-icon class="iconify" icon="lucide:bath"></iconify-icon>
                                   <span>1</span>
                                 </div>
                                 <div class="detail-content">
@@ -280,10 +223,7 @@ const title = 'Wishlist'
                               </div>
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i
-                                    class="iconify"
-                                    data-icon="lucide:box-select"
-                                  ></i>
+                                  <iconify-icon class="iconify" icon="lucide:box-select"></iconify-icon>
                                   <span>110m²</span>
                                 </div>
                                 <div class="detail-content">
@@ -298,24 +238,16 @@ const title = 'Wishlist'
                       <!-- Property -->
                       <div class="column is-4">
                         <a href="#" class="property-card">
-                          <img
-                            src="/img/photo/properties/5.jpg"
-                            alt="showcase photo"
-                          />
+                          <img src="/img/photo/properties/5.jpg" alt="showcase photo" />
                           <div class="property-content">
                             <div class="property-info">
-                              <h3 class="title is-5 is-narrow is-bold">
-                                $275,000 USD
-                              </h3>
+                              <h3 class="title is-5 is-narrow is-bold">$275,000 USD</h3>
                               <p>59, San Marino Av, San Diego</p>
                             </div>
                             <div class="property-details">
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i
-                                    class="iconify"
-                                    data-icon="lucide:bed-double"
-                                  ></i>
+                                  <iconify-icon class="iconify" icon="lucide:bed-double"></iconify-icon>
                                   <span>4</span>
                                 </div>
                                 <div class="detail-content">
@@ -324,7 +256,7 @@ const title = 'Wishlist'
                               </div>
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i class="iconify" data-icon="lucide:bath"></i>
+                                  <iconify-icon class="iconify" icon="lucide:bath"></iconify-icon>
                                   <span>3</span>
                                 </div>
                                 <div class="detail-content">
@@ -333,10 +265,7 @@ const title = 'Wishlist'
                               </div>
                               <div class="property-detail">
                                 <div class="detail-head">
-                                  <i
-                                    class="iconify"
-                                    data-icon="lucide:box-select"
-                                  ></i>
+                                  <iconify-icon class="iconify" icon="lucide:box-select"></iconify-icon>
                                   <span>290m²</span>
                                 </div>
                                 <div class="detail-content">

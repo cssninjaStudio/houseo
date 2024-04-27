@@ -3,7 +3,7 @@ import Alpine from "alpinejs";
 import intersect from "@alpinejs/intersect";
 import persist from "@alpinejs/persist";
 import mediumZoom from 'medium-zoom'
-import Iconify from '@iconify/iconify';
+import 'iconify-icon';
 
 window.Alpine = Alpine;
 //Init intersect plugin

@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Map.astro';
+import Layout from '../layouts/Map.astro'
 const title = 'Contact'
 ---
 
@@ -12,14 +12,7 @@ const title = 'Contact'
     </div>
   </div>
 
-  <div
-    id="hero-map"
-    class="hero is-fullheight contact-hero"
-    x-data="initContactMap()"
-    x-init="initHeroMap()"
-    data-long="-118.44958367724455"
-    data-lat="34.016818496913956"
-  >
+  <div id="hero-map" class="hero is-fullheight contact-hero" x-data="initContactMap()" x-init="initHeroMap()" data-long="-118.44958367724455" data-lat="34.016818496913956">
     <div class="hero-body">
       <div class="container">
         <div class="columns is-vcentered">
@@ -27,9 +20,7 @@ const title = 'Contact'
           <div class="column is-6">
             <div class="card card-form">
               <div class="head">
-                <h2 class="title is-5">
-                  Wondering about something? Feel free to write us a message.
-                </h2>
+                <h2 class="title is-5">Wondering about something? Feel free to write us a message.</h2>
                 <form>
                   <div class="field">
                     <div class="control">
@@ -38,30 +29,20 @@ const title = 'Contact'
                   </div>
                   <div class="field">
                     <div class="control">
-                      <input
-                        class="input is-bigger"
-                        placeholder="Email Address"
-                      />
+                      <input class="input is-bigger" placeholder="Email Address" />
                     </div>
                   </div>
                   <div class="field">
                     <div class="control has-caret">
-                      <textarea
-                        class="textarea"
-                        placeholder="Your message..."
-                      ></textarea>
+                      <textarea class="textarea" placeholder="Your message..."></textarea>
                     </div>
                   </div>
                   <div class="field">
                     <div class="control">
-                      <a class="button is-primary is-fullwidth mx-1"
-                        >Send Message</a
-                      >
+                      <a class="button is-primary is-fullwidth mx-1">Send Message</a>
                     </div>
                   </div>
-                  <a class="bottom-link has-text-centered is-block"
-                    >We always reply!</a
-                  >
+                  <a class="bottom-link has-text-centered is-block">We always reply!</a>
                 </form>
               </div>
             </div>

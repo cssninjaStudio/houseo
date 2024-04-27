@@ -1,7 +1,7 @@
 ---
-import AccountMenu from '../components/AccountMenu.astro';
-import AccountMenuMobile from '../components/AccountMenuMobile.astro';
-import Megamenu from '../components/Megamenu.astro';
+import AccountMenu from '../components/AccountMenu.astro'
+import AccountMenuMobile from '../components/AccountMenuMobile.astro'
+import Megamenu from '../components/Megamenu.astro'
 ---
 
 <div
@@ -12,12 +12,12 @@ import Megamenu from '../components/Megamenu.astro';
   class="navbar is-transparent is-fixed-top"
   role="navigation"
   aria-label="main navigation"
-  :class="{
-        'is-scrolled': scrolled,
-        '': !scrolled,
-        'is-solid': mobileOpen || megamenuOpened,
-        '': !mobileOpen || !megamenuOpened,
-    }"
+  :class=`{
+      'is-scrolled': scrolled,
+      '': !scrolled,
+      'is-solid': mobileOpen || megamenuOpened,
+      '': !mobileOpen || !megamenuOpened,
+  }`
 >
   <div class="container">
     <div class="navbar-brand">
@@ -28,13 +28,10 @@ import Megamenu from '../components/Megamenu.astro';
 
       <div class="navbar-burger" @click="openMobileMenu()">
         <div class="menu-toggle">
-          <div
-            class="icon-box-toggle is-navbar"
-            :class="{
-                            'active': mobileOpen,
-                            '': !mobileOpen
-                        }"
-          >
+          <div class="icon-box-toggle is-navbar" :class=`{
+                'active': mobileOpen,
+                '': !mobileOpen
+            }`>
             <div class="rotate">
               <i class="icon-line-top"></i>
               <i class="icon-line-center"></i>
@@ -49,27 +46,18 @@ import Megamenu from '../components/Megamenu.astro';
       </template>
     </div>
 
-    <div
-      class="navbar-menu"
-      :class="{
-                'is-active': mobileOpen,
-                '': !mobileOpen
-            }"
-    >
+    <div class="navbar-menu" :class=`{
+          'is-active': mobileOpen,
+          '': !mobileOpen
+      }`>
       <div class="navbar-start">
-        <a
-          class="navbar-item"
-          x-on:mouseover="megamenuOpened = true, openedMegamenu = 'megamenu-1'"
-        >
+        <a class="navbar-item" x-on:mouseover="megamenuOpened = true, openedMegamenu = 'megamenu-1'">
           <span>Properties</span>
-          <i class="iconify caret" data-icon="lucide:chevron-down"></i>
+          <iconify-icon class="iconify caret" icon="lucide:chevron-down"></iconify-icon>
         </a>
-        <a
-          class="navbar-item"
-          x-on:mouseover="megamenuOpened = true, openedMegamenu = 'megamenu-2'"
-        >
+        <a class="navbar-item" x-on:mouseover="megamenuOpened = true, openedMegamenu = 'megamenu-2'">
           <span>Rentals</span>
-          <i class="iconify caret" data-icon="lucide:chevron-down"></i>
+          <iconify-icon class="iconify caret" icon="lucide:chevron-down"></iconify-icon>
         </a>
         <a href="/about" class="navbar-item"> About </a>
       </div>
@@ -78,31 +66,26 @@ import Megamenu from '../components/Megamenu.astro';
         <template x-if="$store.app.isLoggedIn === false">
           <a href="/login" class="navbar-item is-end-bordered"> Sign In </a>
         </template>
-        
+
         <a href="/properties" class="navbar-item is-icon">
-          <i class="iconify" data-icon="lucide:search"></i>
+          <iconify-icon class="iconify" icon="lucide:search"></iconify-icon>
         </a>
         <a href="/wishlist" class="navbar-item is-icon">
-          <i class="iconify" data-icon="lucide:heart"></i>
+          <iconify-icon class="iconify" icon="lucide:heart"></iconify-icon>
         </a>
         <div class="navbar-item is-mobile-centered">
           <label class="theme-toggle">
             <input type="checkbox" x-on:change="toggleTheme()" />
             <span class="theme-toggle-inner">
-              <i class="sun-icon iconify" data-icon="feather:sun"></i>
-              <i class="moon-icon iconify" data-icon="feather:moon"></i>
+              <iconify-icon class="sun-icon iconify" icon="lucide:sun"></iconify-icon>
+              <iconify-icon class="moon-icon iconify" icon="lucide:moon"></iconify-icon>
             </span>
           </label>
         </div>
 
         <template x-if="$store.app.isLoggedIn === false">
           <div class="navbar-item">
-            <a
-              href="/signup"
-              class="button navbar-button is-primary raised"
-            >
-              Register
-            </a>
+            <a href="/signup" class="button navbar-button is-primary raised"> Register </a>
           </div>
         </template>
 
@@ -111,7 +94,6 @@ import Megamenu from '../components/Megamenu.astro';
             <AccountMenu />
           </div>
         </template>
-        
       </div>
     </div>
   </div>

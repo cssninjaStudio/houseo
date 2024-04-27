@@ -1,9 +1,4 @@
-<div
-  class="account-dropdown dropdown is-spaced is-right"
-  :class="open && 'is-active'"
-  x-data="initDropdown()"
-  @click.away="close()"
->
+<div class="account-dropdown dropdown is-spaced is-right" :class="open && 'is-active'" x-data="initDropdown()" @click.away="close()">
   <div class="dropdown-trigger">
     <button class="button" aria-haspopup="true" @click="toggle()">
       <img src="/img/avatars/4.jpg" alt="avatar" />
@@ -13,7 +8,7 @@
     <div class="dropdown-content">
       <div class="dropdown-item">
         <a href="/account" class="menu-option">
-          <i class="iconify" data-icon="lucide:user"></i>
+          <iconify-icon class="iconify" icon="lucide:user"></iconify-icon>
           <div class="meta">
             <h4>Account</h4>
             <p>Manage account</p>
@@ -22,7 +17,7 @@
       </div>
       <div class="dropdown-item">
         <a href="/wishlist" class="menu-option">
-          <i class="iconify" data-icon="lucide:heart"></i>
+          <iconify-icon class="iconify" icon="lucide:heart"></iconify-icon>
           <div class="meta">
             <h4>Wishlist</h4>
             <p>View favorites</p>
@@ -31,7 +26,7 @@
       </div>
       <div class="dropdown-item">
         <a href="/settings" class="menu-option">
-          <i class="iconify" data-icon="lucide:settings"></i>
+          <iconify-icon class="iconify" icon="lucide:settings"></iconify-icon>
           <div class="meta">
             <h4>Settings</h4>
             <p>Manage preferences</p>
@@ -41,7 +36,7 @@
       <hr class="dropdown-divider" />
       <div class="dropdown-item">
         <a class="menu-option" @click.prevent="logout()">
-          <i class="iconify" data-icon="feather:log-out"></i>
+          <iconify-icon class="iconify" icon="lucide:log-out"></iconify-icon>
           <div class="meta">
             <h4>Logout</h4>
             <p>Logout from account</p>

@@ -1,6 +1,6 @@
 ---
-import PolkaDots from '../components/PolkaDots.astro';
-import Layout from '../layouts/Default.astro';
+import PolkaDots from '../components/PolkaDots.astro'
+import Layout from '../layouts/Default.astro'
 const title = 'Home'
 ---
 
@@ -8,38 +8,26 @@ const title = 'Home'
   <div class="section carousel-hero">
     <div class="container">
       <div class="hero-title">
-        <h1 class="title is-1 is-narrow">
-          The home of excellence in the construction industry
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non enim quaero
-          quid verum, sed quid cuique dicendum sit. Quid affers, cur Thorius, cur
-          Caius.
-        </p>
+        <h1 class="title is-1 is-narrow">The home of excellence in the construction industry</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non enim quaero quid verum, sed quid cuique dicendum sit. Quid affers, cur Thorius, cur Caius.</p>
       </div>
 
-      <div
-        x-data="initHomeSwiper()"
-        class="carousel-container"
-      >
+      <div x-data="initHomeSwiper()" class="carousel-container">
         <div class="swiper-container" x-ref="container">
           <div class="swiper-caption">
             <div class="swiper-caption-inner">
               <h3 class="title is-4 is-leading is-thin">High-end properties</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non enim
-                quaero quid verum, sed quid cuique dicendum sit.
-              </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non enim quaero quid verum, sed quid cuique dicendum sit.</p>
 
               <div class="caption-actions">
                 <a href="#" class="slide-link">Learn More</a>
                 <div class="carousel-controls">
                   <button @click="swiper.slidePrev()">
-                    <i class="iconify" data-icon="lucide:arrow-left"></i>
+                    <iconify-icon class="iconify" icon="lucide:arrow-left"></iconify-icon>
                   </button>
 
                   <button @click="swiper.slideNext()">
-                    <i class="iconify" data-icon="lucide:arrow-right"></i>
+                    <iconify-icon class="iconify" icon="lucide:arrow-right"></iconify-icon>
                   </button>
                 </div>
               </div>
@@ -90,10 +78,7 @@ const title = 'Home'
   <div class="section">
     <div class="container">
       <div class="section-title is-side">
-        <h2 class="title is-3 is-narrow is-thin">
-          We make sure our lovely customers are always involved so, every
-          transaction flow process in our company is a must for them.
-        </h2>
+        <h2 class="title is-3 is-narrow is-thin">We make sure our lovely customers are always involved so, every transaction flow process in our company is a must for them.</h2>
       </div>
 
       <div class="number-boxes">
@@ -109,15 +94,14 @@ const title = 'Home'
               </div>
               <div class="box-text">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sic, et
-                  quidem diligentius saepiusque ista loquemur inter nos agemusque
-                  communiter. Quid enim necesse est, tamquam meretricem .
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sic, et quidem diligentius saepiusque ista loquemur inter nos agemusque communiter. Quid enim necesse est, tamquam meretricem
+                  .
                 </p>
               </div>
               <div class="box-action">
                 <a href="#" class="slide-link">
                   <span>Learn More</span>
-                  <i class="iconify" data-icon="lucide:arrow-right"></i>
+                  <iconify-icon class="iconify" icon="lucide:arrow-right"></iconify-icon>
                 </a>
               </div>
             </div>
@@ -134,15 +118,14 @@ const title = 'Home'
               </div>
               <div class="box-text">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sic, et
-                  quidem diligentius saepiusque ista loquemur inter nos agemusque
-                  communiter. Quid enim necesse est, tamquam meretricem .
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sic, et quidem diligentius saepiusque ista loquemur inter nos agemusque communiter. Quid enim necesse est, tamquam meretricem
+                  .
                 </p>
               </div>
               <div class="box-action">
                 <a href="#" class="slide-link">
                   <span>Learn More</span>
-                  <i class="iconify" data-icon="lucide:arrow-right"></i>
+                  <iconify-icon class="iconify" icon="lucide:arrow-right"></iconify-icon>
                 </a>
               </div>
             </div>
@@ -159,15 +142,14 @@ const title = 'Home'
               </div>
               <div class="box-text">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sic, et
-                  quidem diligentius saepiusque ista loquemur inter nos agemusque
-                  communiter. Quid enim necesse est, tamquam meretricem .
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sic, et quidem diligentius saepiusque ista loquemur inter nos agemusque communiter. Quid enim necesse est, tamquam meretricem
+                  .
                 </p>
               </div>
               <div class="box-action">
                 <a href="#" class="slide-link">
                   <span>Learn More</span>
-                  <i class="iconify" data-icon="lucide:arrow-right"></i>
+                  <iconify-icon class="iconify" icon="lucide:arrow-right"></iconify-icon>
                 </a>
               </div>
             </div>
@@ -188,17 +170,14 @@ const title = 'Home'
         <div class="polka-dots-wrap is-start"><PolkaDots /></div>
         <div class="polka-dots-wrap is-end"><PolkaDots /></div>
 
-        <div
-          x-data="initProjectsSwiper()"
-          class="carousel-container"
-        >
+        <div x-data="initProjectsSwiper()" class="carousel-container">
           <div class="carousel-controls">
             <button @click="swiper.slidePrev()">
-              <i class="iconify" data-icon="lucide:arrow-left"></i>
+              <iconify-icon class="iconify" icon="lucide:arrow-left"></iconify-icon>
             </button>
 
             <button @click="swiper.slideNext()">
-              <i class="iconify" data-icon="lucide:arrow-right"></i>
+              <iconify-icon class="iconify" icon="lucide:arrow-right"></iconify-icon>
             </button>
           </div>
           <div class="swiper-container" x-ref="container">
@@ -207,24 +186,15 @@ const title = 'Home'
               <div class="swiper-slide">
                 <a class="slide-inner">
                   <div class="slide-content">
-                    <img
-                      class="h-48 w-full object-cover"
-                      src="/img/photo/buildings/carousel/1.jpg"
-                      alt="Slide image"
-                    />
+                    <img class="h-48 w-full object-cover" src="/img/photo/buildings/carousel/1.jpg" alt="Slide image" />
                     <div class="slide-overlay-content">
                       <div class="slide-overlay">
                         <div class="slide-icon">
-                          <img
-                            src="/img/flags/united-states-of-america.svg"
-                            alt="Slide icon"
-                          />
+                          <img src="/img/flags/united-states-of-america.svg" alt="Slide icon" />
                         </div>
                         <div class="overlay-content">
                           <div class="text-content">
-                            <h3 class="title is-5 is-narrow is-thin is-inverted">
-                              Schaeffer Tower
-                            </h3>
+                            <h3 class="title is-5 is-narrow is-thin is-inverted">Schaeffer Tower</h3>
                             <p>Philadelphia &#8212; USA</p>
                           </div>
                         </div>
@@ -237,11 +207,7 @@ const title = 'Home'
               <div class="swiper-slide">
                 <a class="slide-inner">
                   <div class="slide-content">
-                    <img
-                      class="h-48 w-full object-cover"
-                      src="/img/photo/buildings/carousel/2.jpg"
-                      alt="Slide image"
-                    />
+                    <img class="h-48 w-full object-cover" src="/img/photo/buildings/carousel/2.jpg" alt="Slide image" />
                     <div class="slide-overlay-content">
                       <div class="slide-overlay">
                         <div class="slide-icon">
@@ -249,9 +215,7 @@ const title = 'Home'
                         </div>
                         <div class="overlay-content">
                           <div class="text-content">
-                            <h3 class="title is-5 is-narrow is-thin is-inverted">
-                              Klauff Smart City
-                            </h3>
+                            <h3 class="title is-5 is-narrow is-thin is-inverted">Klauff Smart City</h3>
                             <p>Berlin &#8212; Germany</p>
                           </div>
                         </div>
@@ -264,24 +228,15 @@ const title = 'Home'
               <div class="swiper-slide">
                 <a class="slide-inner">
                   <div class="slide-content">
-                    <img
-                      class="h-48 w-full object-cover"
-                      src="/img/photo/buildings/carousel/3.jpg"
-                      alt="Slide image"
-                    />
+                    <img class="h-48 w-full object-cover" src="/img/photo/buildings/carousel/3.jpg" alt="Slide image" />
                     <div class="slide-overlay-content">
                       <div class="slide-overlay">
                         <div class="slide-icon">
-                          <img
-                            src="/img/flags/united-states-of-america.svg"
-                            alt="Slide icon"
-                          />
+                          <img src="/img/flags/united-states-of-america.svg" alt="Slide icon" />
                         </div>
                         <div class="overlay-content">
                           <div class="text-content">
-                            <h3 class="title is-5 is-narrow is-thin is-inverted">
-                              Imperial Tower
-                            </h3>
+                            <h3 class="title is-5 is-narrow is-thin is-inverted">Imperial Tower</h3>
                             <p>New York &#8212; USA</p>
                           </div>
                         </div>
@@ -294,11 +249,7 @@ const title = 'Home'
               <div class="swiper-slide">
                 <a class="slide-inner">
                   <div class="slide-content">
-                    <img
-                      class="h-48 w-full object-cover"
-                      src="/img/photo/buildings/carousel/4.jpg"
-                      alt="Slide image"
-                    />
+                    <img class="h-48 w-full object-cover" src="/img/photo/buildings/carousel/4.jpg" alt="Slide image" />
                     <div class="slide-overlay-content">
                       <div class="slide-overlay">
                         <div class="slide-icon">
@@ -306,9 +257,7 @@ const title = 'Home'
                         </div>
                         <div class="overlay-content">
                           <div class="text-content">
-                            <h3 class="title is-5 is-narrow is-thin is-inverted">
-                              Tour Crayon
-                            </h3>
+                            <h3 class="title is-5 is-narrow is-thin is-inverted">Tour Crayon</h3>
                             <p>Lyon &#8212; France</p>
                           </div>
                         </div>
@@ -321,11 +270,7 @@ const title = 'Home'
               <div class="swiper-slide">
                 <a class="slide-inner">
                   <div class="slide-content">
-                    <img
-                      class="h-48 w-full object-cover"
-                      src="/img/photo/buildings/carousel/5.jpg"
-                      alt="Slide image"
-                    />
+                    <img class="h-48 w-full object-cover" src="/img/photo/buildings/carousel/5.jpg" alt="Slide image" />
                     <div class="slide-overlay-content">
                       <div class="slide-overlay">
                         <div class="slide-icon">
@@ -333,9 +278,7 @@ const title = 'Home'
                         </div>
                         <div class="overlay-content">
                           <div class="text-content">
-                            <h3 class="title is-5 is-narrow is-thin is-inverted">
-                              Centro Nacional
-                            </h3>
+                            <h3 class="title is-5 is-narrow is-thin is-inverted">Centro Nacional</h3>
                             <p>Madrid &#8212; Spain</p>
                           </div>
                         </div>
@@ -348,11 +291,7 @@ const title = 'Home'
               <div class="swiper-slide">
                 <a class="slide-inner">
                   <div class="slide-content">
-                    <img
-                      class="h-48 w-full object-cover"
-                      src="/img/photo/buildings/carousel/6.jpg"
-                      alt="Slide image"
-                    />
+                    <img class="h-48 w-full object-cover" src="/img/photo/buildings/carousel/6.jpg" alt="Slide image" />
                     <div class="slide-overlay-content">
                       <div class="slide-overlay">
                         <div class="slide-icon">
@@ -360,9 +299,7 @@ const title = 'Home'
                         </div>
                         <div class="overlay-content">
                           <div class="text-content">
-                            <h3 class="title is-5 is-narrow is-thin is-inverted">
-                              Convention Center
-                            </h3>
+                            <h3 class="title is-5 is-narrow is-thin is-inverted">Convention Center</h3>
                             <p>Melbourne &#8212; Australia</p>
                           </div>
                         </div>
@@ -381,22 +318,14 @@ const title = 'Home'
   <div class="section">
     <div class="container">
       <div class="section-title is-side b-centered-tablet-p">
-        <h2 class="title is-3 is-narrow is-thin">
-          Talented and experienced Architects
-        </h2>
+        <h2 class="title is-3 is-narrow is-thin">Talented and experienced Architects</h2>
       </div>
 
       <div class="side-video">
         <div class="columns is-vcentered b-centered-tablet-p">
           <div class="column is-6 is-relative is-centered-portrait">
             <div class="video-player-container is-square reversed-play">
-              <video
-                id="hero-player"
-                class="video-player"
-                playsinline
-                controls
-                data-poster="/img/video/poster-square.jpg"
-              >
+              <video id="hero-player" class="video-player" playsinline controls data-poster="/img/video/poster-square.jpg">
                 <source src="/img/video/hands.mp4" type="video/mp4" />
                 <source src="/img/video/hands.webm" type="video/webm" />
               </video>
@@ -406,42 +335,30 @@ const title = 'Home'
             <div class="columns is-multiline b-columns-half-tablet-p">
               <div class="column is-6">
                 <div class="feature py-2 medium:py-4">
-                  <i class="iconify" data-icon="ph:buildings-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:buildings-duotone"></iconify-icon>
                   <h4 class="title is-6 is-narrow">Solid Expertise</h4>
-                  <p class="max-w-2 text-medium">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    videbimus.
-                  </p>
+                  <p class="max-w-2 text-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed videbimus.</p>
                 </div>
               </div>
               <div class="column is-6">
                 <div class="feature py-2 medium:py-4">
-                  <i class="iconify" data-icon="ph:medal-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:medal-duotone"></iconify-icon>
                   <h4 class="title is-6 is-narrow">Award Winning</h4>
-                  <p class="max-w-2 text-medium">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    videbimus.
-                  </p>
+                  <p class="max-w-2 text-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed videbimus.</p>
                 </div>
               </div>
               <div class="column is-6">
                 <div class="feature py-2 medium:py-4">
-                  <i class="iconify" data-icon="ph:sparkle-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:sparkle-duotone"></iconify-icon>
                   <h4 class="title is-6 is-narrow">Creativity</h4>
-                  <p class="max-w-2 text-medium">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    videbimus.
-                  </p>
+                  <p class="max-w-2 text-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed videbimus.</p>
                 </div>
               </div>
               <div class="column is-6">
                 <div class="feature py-2 medium:py-4">
-                  <i class="iconify" data-icon="ph:gear-six-duotone"></i>
+                  <iconify-icon class="iconify" icon="ph:gear-six-duotone"></iconify-icon>
                   <h4 class="title is-6 is-narrow">Technicity</h4>
-                  <p class="max-w-2 text-medium">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    videbimus.
-                  </p>
+                  <p class="max-w-2 text-medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed videbimus.</p>
                 </div>
               </div>
             </div>
@@ -457,27 +374,23 @@ const title = 'Home'
       <div class="side-section">
         <div class="columns is-vcentered b-centered-tablet-p">
           <div class="column is-5 is-offset-1">
-            <h3 class="title is-3 is-narrow is-thin">
-              Highest ranking standards
-            </h3>
+            <h3 class="title is-3 is-narrow is-thin">Highest ranking standards</h3>
             <p class="py-2 max-w-4 auto-tablet-p text-medium">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illud non
-              continuo, ut aeque incontentae. Duo Reges: constructio interrete. Si
-              qua in iis corrigere voluit, deteriora fecit. Sit enim idem caecus,
-              debilis.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illud non continuo, ut aeque incontentae. Duo Reges: constructio interrete. Si qua in iis corrigere voluit, deteriora fecit. Sit
+              enim idem caecus, debilis.
             </p>
 
             <ul class="side-list">
               <li>
-                <i class="iconify" data-icon="lucide:check"></i>
+                <iconify-icon class="iconify" icon="lucide:check"></iconify-icon>
                 <span>AA+ construction standard</span>
               </li>
               <li>
-                <i class="iconify" data-icon="lucide:check"></i>
+                <iconify-icon class="iconify" icon="lucide:check"></iconify-icon>
                 <span>All-Risk insurance</span>
               </li>
               <li>
-                <i class="iconify" data-icon="lucide:check"></i>
+                <iconify-icon class="iconify" icon="lucide:check"></iconify-icon>
                 <span>Project live tracking</span>
               </li>
             </ul>
@@ -488,7 +401,7 @@ const title = 'Home'
               <img src="/img/photo/buildings/6.jpg" alt="" />
               <div class="composition-box">
                 <div class="box-icon">
-                  <i class="iconify" data-icon="ion:flash"></i>
+                  <iconify-icon class="iconify" icon="ion:flash"></iconify-icon>
                 </div>
                 <h4 class="title is-6 is-leading">AA+ Standard</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -506,10 +419,7 @@ const title = 'Home'
               <img src="/img/photo/buildings/8.jpg" alt="" />
               <div class="composition-testimonial">
                 <div class="text-content">
-                  <i
-                    class="iconify"
-                    data-icon="fluent:star-emphasis-24-filled"
-                  ></i>
+                  <iconify-icon class="iconify" icon="fluent:star-emphasis-24-filled"></iconify-icon>
                   <h4 class="title is-6 is-leading">Simply incredible</h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                 </div>
@@ -524,23 +434,21 @@ const title = 'Home'
           <div class="column is-5">
             <h3 class="title is-3 is-narrow is-thin">A robust partnership</h3>
             <p class="py-2 max-w-4 auto-tablet-p text-medium">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illud non
-              continuo, ut aeque incontentae. Duo Reges: constructio interrete. Si
-              qua in iis corrigere voluit, deteriora fecit. Sit enim idem caecus,
-              debilis.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illud non continuo, ut aeque incontentae. Duo Reges: constructio interrete. Si qua in iis corrigere voluit, deteriora fecit. Sit
+              enim idem caecus, debilis.
             </p>
 
             <ul class="side-list">
               <li>
-                <i class="iconify" data-icon="lucide:check"></i>
+                <iconify-icon class="iconify" icon="lucide:check"></iconify-icon>
                 <span>Weekly status meetings</span>
               </li>
               <li>
-                <i class="iconify" data-icon="lucide:check"></i>
+                <iconify-icon class="iconify" icon="lucide:check"></iconify-icon>
                 <span>Project monitoring</span>
               </li>
               <li>
-                <i class="iconify" data-icon="lucide:check"></i>
+                <iconify-icon class="iconify" icon="lucide:check"></iconify-icon>
                 <span>Quarterly process audits</span>
               </li>
             </ul>
@@ -553,9 +461,7 @@ const title = 'Home'
   <div class="section">
     <div class="container">
       <div class="section-title is-side">
-        <h2 class="title is-3 is-narrow is-thin">
-          Invest in one of our projects
-        </h2>
+        <h2 class="title is-3 is-narrow is-thin">Invest in one of our projects</h2>
       </div>
 
       <div class="invest-projects">
@@ -569,24 +475,22 @@ const title = 'Home'
                   <div class="overlay-content">
                     <div class="text-content">
                       <div>
-                        <h3 class="title is-5 is-narrow is-thin">
-                          Concrete Island
-                        </h3>
+                        <h3 class="title is-5 is-narrow is-thin">Concrete Island</h3>
                         <p>Private residence</p>
                       </div>
-                      <i class="iconify" data-icon="ph:house-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:house-duotone"></iconify-icon>
                     </div>
                     <div class="stat-content">
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:bank-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:bank-duotone"></iconify-icon>
                         <span>$120M</span>
                       </div>
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:buildings-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:buildings-duotone"></iconify-icon>
                         <span>250 app.</span>
                       </div>
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:map-pin-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:map-pin-duotone"></iconify-icon>
                         <span>UK</span>
                       </div>
                     </div>
@@ -604,24 +508,22 @@ const title = 'Home'
                   <div class="overlay-content">
                     <div class="text-content">
                       <div>
-                        <h3 class="title is-5 is-narrow is-thin">
-                          Cornwillis Center
-                        </h3>
+                        <h3 class="title is-5 is-narrow is-thin">Cornwillis Center</h3>
                         <p>Office tower</p>
                       </div>
-                      <i class="iconify" data-icon="ph:buildings-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:buildings-duotone"></iconify-icon>
                     </div>
                     <div class="stat-content">
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:bank-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:bank-duotone"></iconify-icon>
                         <span>$870M</span>
                       </div>
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:buildings-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:buildings-duotone"></iconify-icon>
                         <span>2K off.</span>
                       </div>
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:map-pin-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:map-pin-duotone"></iconify-icon>
                         <span>USA</span>
                       </div>
                     </div>
@@ -639,24 +541,22 @@ const title = 'Home'
                   <div class="overlay-content">
                     <div class="text-content">
                       <div>
-                        <h3 class="title is-5 is-narrow is-thin">
-                          Siegfried Tower
-                        </h3>
+                        <h3 class="title is-5 is-narrow is-thin">Siegfried Tower</h3>
                         <p>Office tower</p>
                       </div>
-                      <i class="iconify" data-icon="ph:buildings-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:buildings-duotone"></iconify-icon>
                     </div>
                     <div class="stat-content">
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:bank-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:bank-duotone"></iconify-icon>
                         <span>$650M</span>
                       </div>
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:buildings-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:buildings-duotone"></iconify-icon>
                         <span>1.3K off.</span>
                       </div>
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:map-pin-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:map-pin-duotone"></iconify-icon>
                         <span>Germany</span>
                       </div>
                     </div>
@@ -674,24 +574,22 @@ const title = 'Home'
                   <div class="overlay-content">
                     <div class="text-content">
                       <div>
-                        <h3 class="title is-5 is-narrow is-thin">
-                          Banapula Tower
-                        </h3>
+                        <h3 class="title is-5 is-narrow is-thin">Banapula Tower</h3>
                         <p>Office tower</p>
                       </div>
-                      <i class="iconify" data-icon="ph:buildings-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:buildings-duotone"></iconify-icon>
                     </div>
                     <div class="stat-content">
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:bank-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:bank-duotone"></iconify-icon>
                         <span>$550M</span>
                       </div>
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:buildings-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:buildings-duotone"></iconify-icon>
                         <span>1.7K off.</span>
                       </div>
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:map-pin-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:map-pin-duotone"></iconify-icon>
                         <span>Indonesia</span>
                       </div>
                     </div>
@@ -709,24 +607,22 @@ const title = 'Home'
                   <div class="overlay-content">
                     <div class="text-content">
                       <div>
-                        <h3 class="title is-5 is-narrow is-thin">
-                          Eldridge Riverside
-                        </h3>
+                        <h3 class="title is-5 is-narrow is-thin">Eldridge Riverside</h3>
                         <p>Private residence</p>
                       </div>
-                      <i class="iconify" data-icon="ph:house-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:house-duotone"></iconify-icon>
                     </div>
                     <div class="stat-content">
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:bank-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:bank-duotone"></iconify-icon>
                         <span>$150M</span>
                       </div>
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:buildings-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:buildings-duotone"></iconify-icon>
                         <span>275 app.</span>
                       </div>
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:map-pin-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:map-pin-duotone"></iconify-icon>
                         <span>USA</span>
                       </div>
                     </div>
@@ -747,19 +643,19 @@ const title = 'Home'
                         <h3 class="title is-5 is-narrow is-thin">Twin Center</h3>
                         <p>Office tower</p>
                       </div>
-                      <i class="iconify" data-icon="ph:buildings-duotone"></i>
+                      <iconify-icon class="iconify" icon="ph:buildings-duotone"></iconify-icon>
                     </div>
                     <div class="stat-content">
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:bank-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:bank-duotone"></iconify-icon>
                         <span>$450M</span>
                       </div>
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:buildings-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:buildings-duotone"></iconify-icon>
                         <span>1.2K off.</span>
                       </div>
                       <div class="stat-block">
-                        <i class="iconify" data-icon="ph:map-pin-duotone"></i>
+                        <iconify-icon class="iconify" icon="ph:map-pin-duotone"></iconify-icon>
                         <span>Morocco</span>
                       </div>
                     </div>
@@ -780,18 +676,13 @@ const title = 'Home'
       </div>
 
       <div class="testimonials">
-        <div
-          class="testimonial-cards has-background-image-contained"
-          data-background="/img/shapes/1.svg"
-        >
+        <div class="testimonial-cards has-background-image-contained" data-background="/img/shapes/1.svg">
           <div class="columns is-multiline">
             <div class="column is-3">
               <div class="testimonial-card">
-                <i class="iconify" data-icon="fa6-solid:quote-left"></i>
+                <iconify-icon class="iconify" icon="fa6-solid:quote-left"></iconify-icon>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Confecta res esset. Aliter homines, aliter philosophos loqui
-                  putas oportere? Mihi, inquam, qui te id ipsum rogavi? Frater et
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Confecta res esset. Aliter homines, aliter philosophos loqui putas oportere? Mihi, inquam, qui te id ipsum rogavi? Frater et
                   T. Erat enim res aperta.
                 </p>
                 <div class="customer">
@@ -803,11 +694,8 @@ const title = 'Home'
                 </div>
               </div>
               <div class="testimonial-card">
-                <i class="iconify" data-icon="fa6-solid:quote-left"></i>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. At enim
-                  hic etiam dolore. Quis negat.
-                </p>
+                <iconify-icon class="iconify" icon="fa6-solid:quote-left"></iconify-icon>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. At enim hic etiam dolore. Quis negat.</p>
                 <div class="customer">
                   <img src="/img/avatars/2.jpg" alt="" />
                   <div class="meta">
@@ -819,12 +707,8 @@ const title = 'Home'
             </div>
             <div class="column is-3">
               <div class="testimonial-card">
-                <i class="iconify" data-icon="fa6-solid:quote-left"></i>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-                  negat? Atqui reperies, inquit, in hoc quidem pertinacem; Id
-                  Sextilius factum negabat.
-                </p>
+                <iconify-icon class="iconify" icon="fa6-solid:quote-left"></iconify-icon>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis negat? Atqui reperies, inquit, in hoc quidem pertinacem; Id Sextilius factum negabat.</p>
                 <div class="customer">
                   <img src="/img/avatars/3.jpg" alt="" />
                   <div class="meta">
@@ -834,12 +718,8 @@ const title = 'Home'
                 </div>
               </div>
               <div class="testimonial-card">
-                <i class="iconify" data-icon="fa6-solid:quote-left"></i>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hanc
-                  ergo intuens debet institutum illud quasi signum absolvere.
-                  Satis est ad hoc responsum. Nos commodius agimus.
-                </p>
+                <iconify-icon class="iconify" icon="fa6-solid:quote-left"></iconify-icon>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hanc ergo intuens debet institutum illud quasi signum absolvere. Satis est ad hoc responsum. Nos commodius agimus.</p>
                 <div class="customer">
                   <img src="/img/avatars/4.jpg" alt="" />
                   <div class="meta">
@@ -851,12 +731,8 @@ const title = 'Home'
             </div>
             <div class="column is-3">
               <div class="testimonial-card">
-                <i class="iconify" data-icon="fa6-solid:quote-left"></i>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hanc
-                  ergo intuens debet institutum illud quasi signum absolvere.
-                  Satis est ad hoc responsum. Nos commodius agimus.
-                </p>
+                <iconify-icon class="iconify" icon="fa6-solid:quote-left"></iconify-icon>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hanc ergo intuens debet institutum illud quasi signum absolvere. Satis est ad hoc responsum. Nos commodius agimus.</p>
                 <div class="customer">
                   <img src="/img/avatars/5.jpg" alt="" />
                   <div class="meta">
@@ -866,11 +742,8 @@ const title = 'Home'
                 </div>
               </div>
               <div class="testimonial-card">
-                <i class="iconify" data-icon="fa6-solid:quote-left"></i>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scisse
-                  enim.
-                </p>
+                <iconify-icon class="iconify" icon="fa6-solid:quote-left"></iconify-icon>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scisse enim.</p>
                 <div class="customer">
                   <img src="/img/avatars/6.jpg" alt="" />
                   <div class="meta">
@@ -882,12 +755,8 @@ const title = 'Home'
             </div>
             <div class="column is-3">
               <div class="testimonial-card">
-                <i class="iconify" data-icon="fa6-solid:quote-left"></i>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scisse
-                  enim te quis coarguere possit? Itaque ab his ordiamur. Vide,
-                  quantum..
-                </p>
+                <iconify-icon class="iconify" icon="fa6-solid:quote-left"></iconify-icon>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scisse enim te quis coarguere possit? Itaque ab his ordiamur. Vide, quantum..</p>
                 <div class="customer">
                   <img src="/img/avatars/7.jpg" alt="" />
                   <div class="meta">
@@ -897,12 +766,8 @@ const title = 'Home'
                 </div>
               </div>
               <div class="testimonial-card">
-                <i class="iconify" data-icon="fa6-solid:quote-left"></i>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hanc
-                  ergo intuens debet institutum illud quasi signum absolvere.
-                  Satis est ad hoc responsum. Nos commodius agimus.
-                </p>
+                <iconify-icon class="iconify" icon="fa6-solid:quote-left"></iconify-icon>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hanc ergo intuens debet institutum illud quasi signum absolvere. Satis est ad hoc responsum. Nos commodius agimus.</p>
                 <div class="customer">
                   <img src="/img/avatars/8.jpg" alt="" />
                   <div class="meta">
@@ -970,15 +835,10 @@ const title = 'Home'
       </div>
 
       <div class="cta-outer">
-        <div
-          class="cta-wrapper"
-          data-background="https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        >
+        <div class="cta-wrapper" data-background="https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
           <div class="cta-overlay"></div>
           <div class="cta-content">
-            <h2 class="title is-3 is-thin is-inverted">
-              Engage with our company and invest in our projects
-            </h2>
+            <h2 class="title is-3 is-thin is-inverted">Engage with our company and invest in our projects</h2>
             <div class="buttons is-centered">
               <button class="button is-solid">Invest Now</button>
               <button class="button is-solid">Learn More</button>
